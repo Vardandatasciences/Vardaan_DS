@@ -1,0 +1,665 @@
+.vardaan-footer {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+ 
+.vardaan-footer-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+ 
+.vardaan-footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.85);
+  z-index: 2;
+}
+ 
+.vardaan-footer-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+  color: white;
+}
+ 
+.vardaan-footer-column h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  position: relative;
+}
+ 
+.vardaan-footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #f97316;
+}
+ 
+/* Contact Column */
+.vardaan-contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: -20px;
+}
+ 
+.vardaan-footer-logo {
+  width: 60px;
+  height: auto;
+  filter: brightness(1.2);
+  margin-top: 10px;
+  margin-left: -10px;
+}
+ 
+.vardaan-contact-info {
+  margin-top: -5px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+ 
+.vardaan-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 0;
+}
+ 
+.vardaan-contact-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+  margin-top: 2px;
+}
+ 
+.vardaan-contact-text {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.7;
+  margin-left: 16px;
+  word-break: break-word;
+}
+ 
+.vardaan-contact-row:last-child .vardaan-contact-text {
+  text-align: left;
+  max-width: 350px;
+  white-space: pre-line;
+  font-size: 14px;
+}
+ 
+.vardaan-social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: -10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+ 
+.vardaan-footer-social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* Prevent icons from shrinking */
+}
+ 
+.vardaan-footer-social-icon:hover {
+  background: #f97316;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+}
+ 
+.vardaan-footer-social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+ 
+/* Services and Products Columns */
+.vardaan-services-column ul,
+.vardaan-products-column ul,
+.vardaan-information-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.vardaan-services-column li,
+.vardaan-products-column li,
+.vardaan-information-list li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+ 
+.vardaan-services-column li:hover,
+.vardaan-products-column li:hover,
+.vardaan-information-list li:hover {
+  color: white;
+  transform: translateX(5px);
+}
+ 
+/* Stay Connected Column */
+.vardaan-stay-connected-column {
+  grid-column: 1 / -1;
+  max-width: 500px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -80px;
+}
+ 
+.vardaan-stay-connected-column h4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+ 
+.vardaan-email-form {
+  margin-bottom: 40px;
+}
+ 
+.vardaan-email-input-container {
+  display: flex;
+  margin-top: 20px;
+}
+ 
+.vardaan-email-input {
+  flex: 1;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+ 
+/* When button is visible, adjust input border radius */
+.vardaan-email-input-container:has(.vardaan-send-button) .vardaan-email-input {
+  border-radius: 4px 0 0 4px;
+}
+ 
+/* Alternative for browsers that don't support :has() */
+.vardaan-email-input.with-button {
+  border-radius: 4px 0 0 4px;
+}
+ 
+.vardaan-email-input::placeholder {
+  color: #94a3b8;
+}
+ 
+.vardaan-email-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #f97316;
+}
+ 
+.vardaan-send-button {
+  padding: 12px 20px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  animation: slideIn 0.3s ease-out;
+}
+ 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+.vardaan-send-button:hover {
+  background: #ea580c;
+  transform: translateY(-1px);
+}
+ 
+.vardaan-send-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+ 
+.vardaan-send-button-loading {
+  background: #94a3b8 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+ 
+.vardaan-submit-message {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+}
+ 
+.vardaan-submit-message-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+ 
+.vardaan-submit-message-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+/* Privacy Policy Checkbox Styling */
+.vardaan-privacy-checkbox-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+ 
+.vardaan-privacy-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  gap: 8px;
+  max-width: 300px;
+  text-align: left;
+}
+ 
+.vardaan-privacy-checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+ 
+.vardaan-privacy-checkmark {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 3px;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+ 
+.vardaan-privacy-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+ 
+.vardaan-privacy-checkbox:checked + .vardaan-privacy-checkmark {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+ 
+.vardaan-privacy-checkbox:checked + .vardaan-privacy-checkmark::after {
+  display: block;
+}
+ 
+.vardaan-privacy-text {
+  flex: 1;
+  margin-left: 0;
+}
+ 
+.vardaan-privacy-link {
+  color: #f97316;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+ 
+.vardaan-privacy-link:hover {
+  color: #ea580c;
+}
+ 
+.vardaan-information-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+ 
+.vardaan-information-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.vardaan-information-column li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+ 
+.vardaan-information-column li:hover {
+  color: white;
+  transform: translateX(5px);
+}
+ 
+/* Footer Bottom */
+.vardaan-footer-bottom {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  font-size: 14px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+ 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .vardaan-footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 60px 30px 30px;
+  }
+  .vardaan-contact-column {
+    margin-top: 0;
+  }
+  .vardaan-stay-connected-column {
+    grid-column: 1 / -1;
+  }
+}
+ 
+@media (max-width: 900px) {
+  .vardaan-footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 50px 20px 30px;
+  }
+  .vardaan-contact-column {
+    margin-top: 0;
+  }
+  .vardaan-stay-connected-column {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .vardaan-footer {
+    min-height: 600px;
+  }
+ 
+  .vardaan-footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 20px 20px;
+  }
+ 
+  .vardaan-email-input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .vardaan-email-input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+ 
+  /* Mobile: Keep input rounded when button is visible */
+  .vardaan-email-input.with-button {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+ 
+  .vardaan-send-button {
+    border-radius: 4px;
+    min-width: 70px;
+    width: 70px;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: center;
+    margin-top: 10px;
+  }
+ 
+  .vardaan-privacy-checkbox-container {
+    margin-top: 10px;
+    justify-content: center;
+  }
+ 
+  .vardaan-privacy-checkbox-label {
+    max-width: 280px;
+    font-size: 12px;
+    text-align: center;
+    gap: 6px;
+  }
+ 
+  .vardaan-privacy-checkmark {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+  }
+ 
+  .vardaan-privacy-checkmark::after {
+    left: 3px;
+    top: 0px;
+    width: 3px;
+    height: 7px;
+  }
+ 
+  /* Fixed mobile social icons alignment */
+  .vardaan-social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+ 
+  .vardaan-footer-social-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .vardaan-footer-social-icon svg {
+    width: 18px; /* Slightly smaller icon */
+    height: 18px;
+  }
+ 
+  .vardaan-contact-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .vardaan-contact-icon {
+    margin-right: 10px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .vardaan-contact-text {
+    margin-left: 8px !important;
+    font-size: 15px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    word-break: break-word;
+  }
+  .vardaan-contact-row:last-child .vardaan-contact-text {
+    max-width: 100% !important;
+    text-align: left !important;
+    font-size: 14px !important;
+  }
+}
+ 
+/* Additional mobile-specific improvements */
+@media (max-width: 480px) {
+  .vardaan-social-icons {
+    gap: 10px;
+    flex-direction: row !important;
+    display: flex !important;
+  }
+ 
+  .vardaan-footer-social-icon {
+    width: 36px;
+    height: 36px;
+  }
+ 
+  .vardaan-footer-social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+ 
+.vardaan-contact-text-phone, .vardaan-contact-text-email {
+  font-size: 15px;
+}
+ 
+.vardaan-contact-text-address {
+  font-size: 14px;
+}
+ 
+.vardaan-contact-icon svg {
+  display: block;
+}
+ 
+.vardaan-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: vardaanModalFadeIn 0.25s ease;
+}
+@keyframes vardaanModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.vardaan-modal {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  text-align: center;
+  min-width: 250px;
+  max-width: 90vw;
+  border: 3px solid #3b82f6;
+  animation: vardaanModalPop 0.3s cubic-bezier(.23,1.01,.32,1);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+@keyframes vardaanModalPop {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.vardaan-modal p {
+  font-size: 1.15rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.vardaan-modal button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 2.2rem;
+  background: linear-gradient(90deg, #3b82f6 60%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.15s;
+}
+.vardaan-modal button:hover {
+  background: linear-gradient(90deg, #2563eb 60%, #3b82f6 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+ 

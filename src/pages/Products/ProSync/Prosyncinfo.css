@@ -1,0 +1,1016 @@
+/* ProSync Info Page - Matching Original Design */
+
+.prosync-info {
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.prosync-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+.prosync-hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('../../../assets/Images/Products/ProSync/audit 1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+.prosync-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%);
+}
+
+.prosync-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+  transform: translateX(-1rem) translateY(4rem);
+}
+
+.prosync-hero-title {
+  margin-bottom: 1.5rem;
+}
+
+.prosync-title-main {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.prosync-title-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+.prosync-hero-tagline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prosync-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.prosync-btn-primary {
+  background: #60a5fa;
+  color: #1e293b;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 40px -10px rgba(96, 165, 250, 0.3);
+}
+
+.prosync-btn-primary:hover {
+  background: #93c5fd;
+  transform: translateY(-2px);
+}
+
+.prosync-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prosync-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.prosync-hero-animation {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.prosync-glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3rem);
+  animation: prosync-pulse-glow 2s ease-in-out infinite;
+}
+
+.prosync-glow-1 {
+  top: 25%;
+  left: 10%;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(96, 165, 250, 0.1);
+  animation-delay: 0s;
+}
+
+.prosync-glow-2 {
+  bottom: 25%;
+  right: 10%;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(59, 130, 246, 0.1);
+  animation-delay: 1s;
+}
+
+@keyframes prosync-pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Problem Solution Section */
+.prosync-problem-solution-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.prosync-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.prosync-incident-story {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.prosync-story-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.prosync-alert-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.prosync-story-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.prosync-story-content p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.prosync-story-content strong {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.prosync-problem-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.prosync-problem-card,
+.prosync-solution-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  min-height: 250px;
+}
+
+.prosync-problem-card {
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.02);
+}
+
+.prosync-solution-card {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246, 0.02);
+}
+
+.prosync-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prosync-icon-container {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prosync-problem-icon {
+  background: rgba(239, 68, 68, 0.35);
+  color: #991b1b;
+}
+
+.prosync-solution-icon {
+  background: rgba(59, 130, 246, 0.35);
+  color: #1e40af;
+}
+
+.prosync-alert-icon,
+.prosync-check-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 4;
+}
+
+.prosync-card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.prosync-problem-card .prosync-card-header h2 {
+  color: #dc2626;
+}
+
+.prosync-solution-card .prosync-card-header h2 {
+  color: #3b82f6;
+}
+
+.prosync-card-description {
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.prosync-problem-list,
+.prosync-solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prosync-problem-list li,
+.prosync-solution-list li {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.prosync-problem-list li:before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #dc2626;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+}
+
+.prosync-solution-list li:before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+}
+
+.prosync-name {
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+/* Our Services Section */
+.prosync-our-services-section {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+
+.prosync-service-cards-white-bg {
+  padding: 1.5rem 0;
+  background: #ffffff;
+}
+
+.prosync-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.prosync-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  min-width: 250px;
+  font-size: 1.1rem;
+}
+
+.prosync-settings-icon,
+.prosync-lightbulb-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.prosync-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.prosync-section-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.prosync-service-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.prosync-service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.prosync-service-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #3b82f6;
+}
+
+.prosync-service-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.prosync-service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.prosync-service-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.prosync-our-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Why Choose Us Section */
+.prosync-why-choose-us-section {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+
+.prosync-why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prosync-why-choose-feature-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.prosync-why-choose-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.prosync-why-choose-feature-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #3b82f6;
+}
+
+.prosync-why-choose-feature-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.prosync-why-choose-feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.prosync-why-choose-feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Features Section */
+.prosync-features-section {
+  padding: 0;
+  background: #ffffff;
+}
+
+.prosync-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prosync-feature-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prosync-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+}
+
+.prosync-feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.prosync-feature-blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.prosync-feature-green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.prosync-feature-orange {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.prosync-feature-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.prosync-feature-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.prosync-feature-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Roles Benefit Section */
+.prosync-roles-benefit-section {
+  padding: 0.75rem 0;
+  background: #ffffff;
+}
+
+.prosync-roles-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prosync-role-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.prosync-role-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.prosync-role-icon {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #3b82f6;
+}
+
+.prosync-role-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.prosync-role-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.prosync-role-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.prosync-industries-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.prosync-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prosync-industry-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prosync-industry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+}
+
+.prosync-industry-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prosync-industry-blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.prosync-industry-green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.prosync-industry-orange {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.prosync-industry-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.prosync-industry-content {
+  flex: 1;
+}
+
+.prosync-industry-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.prosync-industry-content p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+.prosync-contact-section {
+  padding: 2.5rem 0;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+}
+
+.prosync-contact-section .prosync-section-header h2 {
+  color: white !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.prosync-contact-section .prosync-section-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.prosync-contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.prosync-contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prosync-contact-card {
+  background: #374151;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.prosync-contact-card:hover {
+  transform: translateY(-2px);
+}
+
+.prosync-contact-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prosync-contact-icon svg {
+  width: 3rem;
+  height: 3rem;
+  color: #06b6d4;
+}
+
+.prosync-contact-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.prosync-contact-card p {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.prosync-contact-link {
+  color: #06b6d4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.prosync-contact-link:hover {
+  color: #0891b2;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .prosync-hero-buttons {
+    flex-direction: row;
+  }
+  
+  .prosync-contact-buttons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .prosync-container {
+    padding: 0 1rem;
+  }
+  
+  .prosync-hero-content {
+    padding: 0 1rem;
+  }
+  
+  .prosync-title-main {
+    font-size: 2.5rem;
+  }
+  
+  .prosync-title-sub {
+    font-size: 1.5rem;
+  }
+  
+  .prosync-hero-tagline {
+    font-size: 1.125rem;
+  }
+  
+  .prosync-problem-solution-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .prosync-our-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-why-choose-us-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-roles-benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-industry-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .prosync-contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .prosync-section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .prosync-service-card,
+  .prosync-feature-card,
+  .prosync-role-card {
+    padding: 1.5rem;
+  }
+  
+  .prosync-problem-card,
+  .prosync-solution-card {
+    padding: 1.5rem;
+  }
+  
+  .prosync-hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+/* Mobile-specific contact section improvements */
+@media (max-width: 768px) {
+  .prosync-contact-card {
+    padding: 2rem 1.5rem;
+    min-height: 250px;
+  }
+  
+  .prosync-contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prosync-contact-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prosync-contact-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    background: white;
+    border-radius: 0.5rem;
+    min-width: 280px;
+    text-align: center;
+    word-break: break-all;
+    white-space: normal;
+  }
+  
+  .prosync-contact-info {
+    gap: 2rem;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .prosync-service-card,
+  .prosync-feature-card,
+  .prosync-role-card,
+  .prosync-industry-card {
+    margin-bottom: 1rem;
+  }
+  
+  .prosync-btn-primary,
+  .prosync-btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+  
+  .prosync-story-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .prosync-problem-list li,
+  .prosync-solution-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prosync-card-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .prosync-service-card p,
+  .prosync-feature-card p,
+  .prosync-role-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+}
+
+@media (max-width: 480px) {
+  .prosync-title-main {
+    font-size: 2rem;
+  }
+  
+  .prosync-title-sub {
+    font-size: 1.25rem;
+  }
+  
+  .prosync-hero-tagline {
+    font-size: 1rem;
+  }
+  
+  .prosync-problem-card,
+  .prosync-solution-card,
+  .prosync-service-card,
+  .prosync-feature-card,
+  .prosync-industry-card,
+  .prosync-contact-card {
+    padding: 1.5rem;
+  }
+  
+  .prosync-section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .prosync-section-header p {
+    font-size: 1rem;
+  }
+  
+  .prosync-card-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .prosync-service-icon,
+  .prosync-feature-icon,
+  .prosync-role-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .prosync-service-icon svg,
+  .prosync-feature-icon svg,
+  .prosync-role-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .prosync-hero-section {
+    min-height: 80vh;
+  }
+  
+  .prosync-container {
+    padding: 0 0.75rem;
+  }
+  
+  .prosync-hero-content {
+    padding: 0 0.75rem;
+  }
+}

@@ -1,0 +1,392 @@
+/* International Data Transfers Notice Page Styles */
+.international-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  color: #ffffff;
+  padding-top: 100px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.international-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* Header Styles */
+.international-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 0;
+  border-bottom: 2px solid rgba(195, 139, 63, 0.3);
+}
+
+.international-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #c38b3f;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.international-header h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.policy-dates p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Content Styles */
+.international-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.international-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.international-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.international-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c38b3f;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(195, 139, 63, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.international-section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 25px 0 15px 0;
+  padding-left: 15px;
+  border-left: 4px solid #c38b3f;
+}
+
+.international-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 20px 0 10px 0;
+}
+
+.international-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-align-last: left;
+}
+
+.international-section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.international-section li {
+  font-size: 1rem;
+  color: #d0d0d0;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.international-section li::marker {
+  color: #c38b3f;
+}
+
+.international-section strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Category Grid Layouts */
+.transfer-locations,
+.gdpr-safeguards,
+.dpdpa-compliance,
+.transfer-purposes,
+.rights-categories,
+.security-measures,
+.vendor-management,
+.monitoring-updates,
+.emergency-procedures,
+.contact-information {
+  display: grid;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.transfer-locations,
+.transfer-purposes,
+.security-measures,
+.monitoring-updates,
+.emergency-procedures {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.gdpr-safeguards {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.dpdpa-compliance,
+.rights-categories,
+.contact-information {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.vendor-management {
+  grid-template-columns: 1fr;
+}
+
+/* Category Containers */
+.location-category,
+.safeguard-category,
+.compliance-category,
+.purpose-category,
+.rights-category,
+.security-category,
+.vendor-category,
+.monitoring-category,
+.emergency-category,
+.contact-category,
+.documentation-category {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.location-category:hover,
+.safeguard-category:hover,
+.compliance-category:hover,
+.purpose-category:hover,
+.rights-category:hover,
+.security-category:hover,
+.vendor-category:hover,
+.monitoring-category:hover,
+.emergency-category:hover,
+.contact-category:hover,
+.documentation-category:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(195, 139, 63, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Service Provider Table */
+.provider-table {
+  display: grid;
+  gap: 2px;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 1.5fr;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-header {
+  background: rgba(195, 139, 63, 0.3);
+}
+
+.table-header span {
+  padding: 12px 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(195, 139, 63, 0.8);
+  text-align: center;
+}
+
+.table-row span {
+  padding: 12px 15px;
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-row span:last-child {
+  border-right: none;
+}
+
+.table-row:hover span {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Documentation Section */
+.documentation {
+  grid-template-columns: 1fr;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .international-header h1 {
+    font-size: 2.4rem;
+  }
+  
+  .international-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .international-section {
+    padding: 25px;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1.1fr 0.8fr 1.3fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .international-page {
+    padding-top: 80px;
+  }
+  
+  .international-container {
+    padding: 0 15px 30px;
+  }
+  
+  .international-header h1 {
+    font-size: 2rem;
+  }
+  
+  .international-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .international-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .international-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .international-section h3 {
+    font-size: 1.2rem;
+    padding-left: 12px;
+  }
+  
+  .transfer-locations,
+  .gdpr-safeguards,
+  .dpdpa-compliance,
+  .transfer-purposes,
+  .rights-categories,
+  .security-measures,
+  .vendor-management,
+  .monitoring-updates,
+  .emergency-procedures,
+  .contact-information {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .provider-table {
+    overflow-x: auto;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 80px 100px 70px 120px;
+    min-width: 370px;
+  }
+  
+  .table-header span,
+  .table-row span {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .international-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .international-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .international-section {
+    padding: 15px;
+  }
+  
+  .international-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .international-section h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .international-page {
+    background: white;
+    color: black;
+    padding-top: 0;
+  }
+  
+  .international-container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .international-section {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .international-section h2 {
+    color: #333;
+    border-bottom-color: #ccc;
+  }
+  
+  .international-section h3 {
+    color: #333;
+    border-left-color: #666;
+  }
+  
+  .international-section p,
+  .international-section li {
+    color: #333;
+  }
+} 

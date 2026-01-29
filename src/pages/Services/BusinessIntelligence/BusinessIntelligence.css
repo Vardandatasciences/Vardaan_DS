@@ -1,0 +1,463 @@
+.business-intelligence {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Business Intelligence Intro Section */
+.bi-intro-section {
+  padding: 80px 0 40px 0;
+  background: #ffffff;
+}
+
+.bi-intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.bi-intro-image-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.bi-intro-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bi-intro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bi-intro-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bi-checkmark {
+  color: #22c55e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.bi-intro-point p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+/* Business Intelligence Features Section */
+.bi-features-section {
+  padding: 40px 0 40px 0;
+}
+
+.bi-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.bi-features-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bi-features-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bi-features-checkmark {
+  color: #22c55e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.bi-features-point p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+.bi-features-image-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.bi-features-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Client Benefits Section */
+.client-benefits-section {
+  padding: 40px 0 80px 0;
+  background: #ffffff;
+}
+
+.business-intelligence-benefits-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.business-intelligence-benefits-heading h2 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 700;
+}
+
+.client-benefit-row {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: stretch;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.client-benefit-row:last-child {
+  margin-bottom: 0;
+}
+
+.client-benefit-image-wrapper {
+  flex: 1;
+  max-width: 50%;
+}
+
+.client-benefit-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.client-benefit-content {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-benefit-content.light-blue {
+  background: #dbeafe;
+}
+
+.client-benefit-content.light-green {
+  background: #dcfce7;
+}
+
+.client-benefit-content.light-purple {
+  background: #f3e8ff;
+}
+
+.client-benefit-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.client-benefit-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #1f2937;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive Design */
+
+/* Large Laptops (1400px and above) */
+@media (min-width: 1400px) {
+  .bi-intro-container,
+  .bi-features-container {
+    max-width: 1400px;
+    gap: 80px;
+  }
+  
+  .client-benefit-row {
+    max-width: 1400px;
+  }
+  
+  .client-benefit-content {
+    padding: 80px 70px;
+  }
+  
+  .client-benefit-content h3 {
+    font-size: 2rem;
+  }
+  
+  .client-benefit-content p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Standard Laptops (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .bi-intro-container,
+  .bi-features-container {
+    gap: 60px;
+    padding: 0 30px;
+  }
+  
+  .client-benefit-row {
+    margin: 0 30px 40px 30px;
+  }
+}
+
+/* Small Laptops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bi-intro-container,
+  .bi-features-container {
+    gap: 50px;
+    padding: 0 30px;
+  }
+  
+  .client-benefit-row {
+    margin: 0 30px 40px 30px;
+  }
+  
+  .client-benefit-content {
+    padding: 50px 40px;
+  }
+  
+  .client-benefit-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .client-benefit-content p {
+    font-size: 1.1rem;
+  }
+  
+  .client-benefits-heading h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .bi-intro-container,
+  .bi-features-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding: 0 40px;
+  }
+  
+  .bi-intro-image-wrapper,
+  .bi-features-image-wrapper {
+    max-width: 80%;
+  }
+  
+  .client-benefits-section {
+    padding: 50px 0;
+  }
+  
+  .client-benefits-heading h2 {
+    font-size: 2rem;
+  }
+  
+  .client-benefit-row {
+    flex-direction: column;
+    margin: 0 30px 30px 30px;
+  }
+  
+  .client-benefit-image-wrapper {
+    max-width: 100%;
+  }
+  
+  .client-benefit-content {
+    padding: 40px 35px;
+  }
+  
+  .client-benefit-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .client-benefit-content p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.2rem;
+  }
+  
+  .bi-intro-section,
+  .bi-features-section {
+    padding: 30px 0;
+  }
+  
+  .bi-intro-container,
+  .bi-features-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .bi-intro-content,
+  .bi-features-content {
+    order: 2;
+  }
+
+  .bi-intro-image-wrapper,
+  .bi-features-image-wrapper {
+    order: 1;
+    max-width: 100%;
+  }
+  
+  .client-benefits-section {
+    padding: 30px 0;
+  }
+  
+  .client-benefits-heading h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .client-benefit-row {
+    flex-direction: column;
+    margin: 0 20px 20px 20px;
+  }
+
+  .client-benefit-row.reverse {
+    flex-direction: column;
+  }
+
+  .client-benefit-row.reverse .client-benefit-image-wrapper {
+    order: 1;
+  }
+
+  .client-benefit-row.reverse .client-benefit-content {
+    order: 2;
+  }
+  
+  .client-benefit-image-wrapper {
+    max-width: 100%;
+  }
+  
+  .client-benefit-content {
+    padding: 25px 20px;
+  }
+  
+  .client-benefit-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  
+  .client-benefit-content p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+
+/* Extra Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  
+  .client-benefits-heading h2 {
+    font-size: 1.6rem;
+  }
+  
+  .client-benefit-content {
+    padding: 25px 20px;
+  }
+  
+  .client-benefit-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .client-benefit-content p {
+    font-size: 0.95rem;
+  }
+}

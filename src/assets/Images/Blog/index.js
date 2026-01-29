@@ -1,0 +1,97 @@
+// Blog images index - imports all blog images so webpack processes them
+// This ensures all blog images are available in the build
+
+// Import all blog images
+import img1755497965372 from './1755497965372.png';
+import blogImg1755064983157 from './blog-1755064983157-12931860.png';
+import blogImg1755064983199 from './blog-1755064983199-202771995.png';
+import blogImg1755104390779 from './blog-1755104390779-578349330.jpg';
+import blogImg1755587967598 from './blog-1755587967598-615892528.png';
+import blogImg1755627042464 from './blog-1755627042464-216685196.png';
+import blogImg1755664966089 from './blog-1755664966089-833670262.jpg';
+import blogImg1755664966091 from './blog-1755664966091-660646341.jpg';
+import blogImg1755773616100 from './blog-1755773616100-183980751.png';
+import blogImg1755773616147 from './blog-1755773616147-645440750.avif';
+
+// Import missing images
+import blogImg1756961682932 from './blog-1756961682932-238915808.png';
+import blogImg1756962237728 from './blog-1756962237728-146608348.png';
+import blogImg1756962774980 from './blog-1756962774980-412176781.png';
+import blogImg1756965070343 from './blog-1756965070343-573631638.png';
+import blogImg1756965620233 from './blog-1756965620233-382785717.png';
+import blogImg1756967592285 from './blog-1756967592285-118516437.jpg';
+import blogImg1756970309710 from './blog-1756970309710-148251695.png';
+import blogImg1756971223971 from './blog-1756971223971-395959779.png';
+
+// Import newly published blog images
+import blogImg1757315633904 from './blog-1757315633904-430839127.png';
+import blogImg1757317905218 from './blog-1757317905218-492370896.jpg';
+import blogImg1757318352682 from './blog-1757318352682-419629393.jpg';
+import blogImg1757319112104 from './blog-1757319112104-321126852.jpg';
+import blogImg1757320825884 from './blog-1757320825884-607026805.jpg';
+import blogImg1757321195939 from './blog-1757321195939-862681079.jpg';
+
+// Create a mapping of filename to imported image
+export const blogImages = {
+  '1755497965372.png': img1755497965372,
+  'blog-1755064983157-12931860.png': blogImg1755064983157,
+  'blog-1755064983199-202771995.png': blogImg1755064983199,
+  'blog-1755104390779-578349330.jpg': blogImg1755104390779,
+  'blog-1755587967598-615892528.png': blogImg1755587967598,
+  'blog-1755627042464-216685196.png': blogImg1755627042464,
+  'blog-1755664966089-833670262.jpg': blogImg1755664966089,
+  'blog-1755664966091-660646341.jpg': blogImg1755664966091,
+  'blog-1755773616100-183980751.png': blogImg1755773616100,
+  'blog-1755773616147-645440750.avif': blogImg1755773616147,
+  // Add missing images
+  'blog-1756961682932-238915808.png': blogImg1756961682932,
+  'blog-1756962237728-146608348.png': blogImg1756962237728,
+  'blog-1756962774980-412176781.png': blogImg1756962774980,
+  'blog-1756965070343-573631638.png': blogImg1756965070343,
+  'blog-1756965620233-382785717.png': blogImg1756965620233,
+  'blog-1756967592285-118516437.jpg': blogImg1756967592285,
+  'blog-1756970309710-148251695.png': blogImg1756970309710,
+  'blog-1756971223971-395959779.png': blogImg1756971223971,
+  // Add newly published blog images
+  'blog-1757315633904-430839127.png': blogImg1757315633904,
+  'blog-1757317905218-492370896.jpg': blogImg1757317905218,
+  'blog-1757318352682-419629393.jpg': blogImg1757318352682,
+  'blog-1757319112104-321126852.jpg': blogImg1757319112104,
+  'blog-1757320825884-607026805.jpg': blogImg1757320825884,
+  'blog-1757321195939-862681079.jpg': blogImg1757321195939,
+};
+
+// Helper function to get image URL by filename
+export const getBlogImageUrl = (filename) => {
+  return blogImages[filename] || null;
+};
+
+// Export all images for easy access
+export {
+  img1755497965372,
+  blogImg1755064983157,
+  blogImg1755064983199,
+  blogImg1755104390779,
+  blogImg1755587967598,
+  blogImg1755627042464,
+  blogImg1755664966089,
+  blogImg1755664966091,
+  blogImg1755773616100,
+  blogImg1755773616147,
+  // Export missing images
+  blogImg1756961682932,
+  blogImg1756962237728,
+  blogImg1756962774980,
+  blogImg1756965070343,
+  blogImg1756965620233,
+  blogImg1756967592285,
+  blogImg1756970309710,
+  blogImg1756971223971,
+  // Export newly published blog images
+  blogImg1757315633904,
+  blogImg1757317905218,
+  blogImg1757318352682,
+  blogImg1757319112104,
+  blogImg1757320825884,
+  blogImg1757321195939,
+};

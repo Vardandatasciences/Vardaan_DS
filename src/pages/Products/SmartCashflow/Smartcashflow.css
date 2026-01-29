@@ -1,0 +1,658 @@
+.smartcashflow-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Hero Section */
+.smartcashflow-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem 4rem 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.smartcashflow-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+  z-index: 1;
+}
+
+.smartcashflow-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.smartcashflow-hero-content {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* AI-Powered Tag */
+.smartcashflow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e8f5e9;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.lightning-icon {
+  color: #2e7d32;
+  flex-shrink: 0;
+}
+
+/* Main Title */
+.smartcashflow-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin: 0;
+  max-width: 100%;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.title-highlight {
+  color: #4caf50;
+}
+
+/* Description */
+.smartcashflow-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #2a2a2a;
+  max-width: 700px;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* CTA Buttons */
+.smartcashflow-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.smartcashflow-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.smartcashflow-btn-primary:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.smartcashflow-btn-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.smartcashflow-btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.smartcashflow-btn-secondary {
+  padding: 0.875rem 2rem;
+  background-color: #ffffff;
+  color: #4a4a4a;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.smartcashflow-btn-secondary:hover {
+  border-color: #4caf50;
+  color: #4caf50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smartcashflow-hero {
+    padding: 3rem 1.5rem;
+    min-height: 70vh;
+  }
+
+  .smartcashflow-title {
+    font-size: 2.5rem;
+  }
+
+  .smartcashflow-description {
+    font-size: 1rem;
+  }
+
+  .smartcashflow-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .smartcashflow-btn-primary,
+  .smartcashflow-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartcashflow-title {
+    font-size: 2rem;
+  }
+
+  .smartcashflow-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* The Challenge We Solve Section */
+.challenge-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.challenge-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.challenge-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.challenge-subtitle {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.challenge-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* The last 2 cards will naturally flow into columns 1 and 2 of the second row */
+
+.challenge-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.challenge-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: #ffe0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-icon-wrapper svg {
+  color: #d32f2f;
+  width: 24px;
+  height: 24px;
+}
+
+.challenge-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+}
+
+.challenge-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Responsive Design for Challenge Section */
+@media (max-width: 968px) {
+  .challenge-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Reset grid positioning for smaller screens */
+  .challenge-card:nth-child(4),
+  .challenge-card:nth-child(5) {
+    grid-column: auto;
+    justify-self: auto;
+    margin: 0;
+  }
+  
+  /* Center the last card when there are 5 cards (2-2-1 layout) */
+  .challenge-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenge-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .challenge-title {
+    font-size: 2rem;
+  }
+
+  .challenge-subtitle {
+    font-size: 1rem;
+  }
+
+  .challenge-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .challenge-card:nth-child(5) {
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  .challenge-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .challenge-section {
+    padding: 3rem 1rem;
+  }
+
+  .challenge-title {
+    font-size: 1.75rem;
+  }
+
+  .challenge-card-title {
+    font-size: 1.125rem;
+  }
+
+  .challenge-card-description {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Key Features Section */
+.features-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.features-subtitle {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background-color: #e8f5e9;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon-wrapper svg {
+  color: #4caf50;
+  width: 24px;
+  height: 24px;
+}
+
+.feature-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+}
+
+.feature-card-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 1.5rem 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+}
+
+.checkmark-icon {
+  color: #4caf50;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.feature-list li span {
+  line-height: 1.5;
+}
+
+/* Responsive Design for Features Section */
+@media (max-width: 968px) {
+  .features-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-card:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .features-subtitle {
+    font-size: 1rem;
+  }
+
+  .features-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-card:nth-child(3) {
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 3rem 1rem;
+  }
+
+  .features-title {
+    font-size: 1.75rem;
+  }
+
+  .feature-card-title {
+    font-size: 1.125rem;
+  }
+
+  .feature-card-description {
+    font-size: 0.9375rem;
+  }
+
+  .feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 20+ Financial Analysis Types Section */
+.analysis-types-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.analysis-types-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analysis-types-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.analysis-types-subtitle {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.analysis-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.analysis-type-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analysis-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.analysis-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background-color: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.analysis-icon-wrapper svg {
+  color: #4caf50;
+  width: 24px;
+  height: 24px;
+}
+
+.analysis-type-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.analysis-type-description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Responsive Design for Analysis Types Section */
+@media (max-width: 1024px) {
+  .analysis-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .analysis-types-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .analysis-types-title {
+    font-size: 2rem;
+  }
+
+  .analysis-types-subtitle {
+    font-size: 1rem;
+  }
+
+  .analysis-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .analysis-type-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analysis-types-section {
+    padding: 3rem 1rem;
+  }
+
+  .analysis-types-title {
+    font-size: 1.75rem;
+  }
+
+  .analysis-types-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .analysis-type-title {
+    font-size: 1rem;
+  }
+
+  .analysis-type-description {
+    font-size: 0.875rem;
+  }
+
+  .analysis-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .analysis-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+

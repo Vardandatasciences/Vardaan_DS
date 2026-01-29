@@ -1,0 +1,832 @@
+.voicelume-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Hero Section */
+.voicelume-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem 4rem 2rem;
+  background-color: #fafbfc;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+}
+
+.voicelume-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.voicelume-hero-content {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* AI-Powered Badge */
+.voicelume-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border-radius: 24px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+}
+
+.star-icon {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Main Title */
+.voicelume-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.title-vardaan {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.title-voice {
+  background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-lume {
+  background: linear-gradient(90deg, #38b2ac 0%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tagline */
+.voicelume-tagline {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature Highlights */
+.voicelume-features {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.voicelume-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.voicelume-feature-item svg {
+  color: #ffffff;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* CTA Buttons */
+.voicelume-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.voicelume-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(90deg, #8b5cf6 0%, #0d9488 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.voicelume-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.voicelume-btn-primary:active {
+  transform: translateY(0);
+}
+
+.voicelume-btn-primary svg {
+  flex-shrink: 0;
+}
+
+.voicelume-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: #ffffff;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voicelume-btn-secondary:hover {
+  background: #f7fafc;
+  border-color: #a0aec0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.voicelume-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .voicelume-hero {
+    padding: 6rem 1.5rem 3rem 1.5rem;
+  }
+
+  .voicelume-title {
+    font-size: 2.5rem;
+  }
+
+  .voicelume-tagline {
+    font-size: 1rem;
+  }
+
+  .voicelume-features {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  .voicelume-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .voicelume-btn-primary,
+  .voicelume-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .voicelume-title {
+    font-size: 2rem;
+  }
+
+  .voicelume-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.875rem;
+  }
+
+  .voicelume-feature-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* Challenge Section */
+.voicelume-challenge {
+  padding: 5rem 2rem;
+  background-color: #f7fafc;
+}
+
+.voicelume-challenge-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.voicelume-challenge-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.voicelume-challenge-subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3182ce;
+  margin: 0 0 1rem 0;
+}
+
+.voicelume-challenge-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.voicelume-challenge-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Challenge Cards Grid */
+.voicelume-challenge-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.voicelume-challenge-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.voicelume-challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.voicelume-card-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.voicelume-card-icon-red {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.voicelume-card-icon-pink {
+  background-color: #fce7f3;
+  color: #dc2626;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.voicelume-card-icon svg {
+  flex-shrink: 0;
+}
+
+.voicelume-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.voicelume-card-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Responsive Design for Challenge Section */
+@media (max-width: 968px) {
+  .voicelume-challenge-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .voicelume-challenge {
+    padding: 4rem 1.5rem;
+  }
+
+  .voicelume-challenge-title {
+    font-size: 2rem;
+  }
+
+  .voicelume-challenge-description {
+    font-size: 1rem;
+  }
+
+  .voicelume-challenge-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .voicelume-challenge-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voicelume-challenge {
+    padding: 3rem 1rem;
+  }
+
+  .voicelume-challenge-title {
+    font-size: 1.75rem;
+  }
+
+  .voicelume-challenge-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .voicelume-card-title {
+    font-size: 1.125rem;
+  }
+
+  .voicelume-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Solution Section */
+.voicelume-solution {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.voicelume-solution-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.voicelume-solution-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.voicelume-solution-subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b5cf6;
+  margin: 0 0 1rem 0;
+}
+
+.voicelume-solution-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.voicelume-solution-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Solution Cards Grid */
+.voicelume-solution-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.voicelume-solution-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  text-align: left;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.voicelume-solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.voicelume-solution-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.voicelume-solution-icon-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+.voicelume-solution-icon-teal {
+  background: linear-gradient(135deg, #3182ce 0%, #0d9488 100%);
+}
+
+.voicelume-solution-icon svg {
+  flex-shrink: 0;
+}
+
+.voicelume-solution-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  background-color: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3182ce;
+  z-index: 1;
+}
+
+.voicelume-solution-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.voicelume-solution-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.voicelume-solution-card-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #4a5568;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive Design for Solution Section */
+@media (max-width: 968px) {
+  .voicelume-solution-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .voicelume-solution {
+    padding: 4rem 1.5rem;
+  }
+
+  .voicelume-solution-title {
+    font-size: 2rem;
+  }
+
+  .voicelume-solution-description {
+    font-size: 1rem;
+  }
+
+  .voicelume-solution-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .voicelume-solution-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voicelume-solution {
+    padding: 3rem 1rem;
+  }
+
+  .voicelume-solution-title {
+    font-size: 1.75rem;
+  }
+
+  .voicelume-solution-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .voicelume-solution-card-title {
+    font-size: 1.125rem;
+  }
+
+  .voicelume-solution-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Competitive Advantages Section */
+.voicelume-advantages {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.voicelume-advantages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.voicelume-advantages-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.voicelume-advantages-subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b5cf6;
+  margin: 0 0 1rem 0;
+}
+
+.voicelume-advantages-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.voicelume-advantages-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a5568;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Advantages Cards Grid */
+.voicelume-advantages-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.voicelume-advantages-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.voicelume-advantages-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.voicelume-advantages-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.voicelume-advantages-icon-purple {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+.voicelume-advantages-icon-teal {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+}
+
+.voicelume-advantages-icon-yellow {
+  background-color: #fef3c7;
+  color: #f59e0b;
+}
+
+.voicelume-advantages-icon-green {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+.voicelume-advantages-icon-purple-cost {
+  background-color: #f3e8ff;
+  color: #8b5cf6;
+}
+
+.voicelume-advantages-icon-teal-target {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+}
+
+.voicelume-advantages-icon svg {
+  flex-shrink: 0;
+}
+
+.voicelume-advantages-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.voicelume-advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.voicelume-advantages-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.voicelume-advantages-list li:last-child {
+  margin-bottom: 0;
+}
+
+.voicelume-advantages-list li .checkmark-icon {
+  width: 18px;
+  height: 18px;
+  background-color: #10b981;
+  border-radius: 50%;
+  color: #ffffff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+.voicelume-advantages-list li .checkmark-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+.voicelume-advantages-list li span {
+  flex: 1;
+}
+
+/* Responsive Design for Advantages Section */
+@media (max-width: 968px) {
+  .voicelume-advantages-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .voicelume-advantages {
+    padding: 4rem 1.5rem;
+  }
+
+  .voicelume-advantages-title {
+    font-size: 2rem;
+  }
+
+  .voicelume-advantages-description {
+    font-size: 1rem;
+  }
+
+  .voicelume-advantages-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .voicelume-advantages-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voicelume-advantages {
+    padding: 3rem 1rem;
+  }
+
+  .voicelume-advantages-title {
+    font-size: 1.75rem;
+  }
+
+  .voicelume-advantages-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .voicelume-advantages-card-title {
+    font-size: 1.125rem;
+  }
+
+  .voicelume-advantages-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Quote Banner Section */
+.voicelume-quote-banner {
+  padding: 1rem 2rem 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.voicelume-quote-banner-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #3182ce 0%, #0d9488 100%);
+  border-radius: 12px;
+  padding: 2rem 3rem;
+}
+
+.voicelume-quote-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive Design for Quote Banner */
+@media (max-width: 768px) {
+  .voicelume-quote-banner {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .voicelume-quote-banner-container {
+    padding: 1.75rem 2rem;
+  }
+
+  .voicelume-quote-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voicelume-quote-banner {
+    padding: 2rem 1rem;
+  }
+
+  .voicelume-quote-banner-container {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .voicelume-quote-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
