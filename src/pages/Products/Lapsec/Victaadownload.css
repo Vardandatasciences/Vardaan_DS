@@ -1,0 +1,934 @@
+/* Reset and Base Styles for ViCTAA Download Page */
+.victaa-download-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.victaa-download-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure footer displays correctly on download page */
+.victaa-download-page .vardaan-footer {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin-top: auto;
+}
+
+.victaa-download-page .vardaan-footer-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.victaa-download-page .vardaan-footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.85);
+  z-index: 2;
+}
+
+.victaa-download-page .vardaan-footer-content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+  color: white;
+}
+
+/* Container */
+.victaa-download-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.victaa-download-header {
+  background: transparent;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.victaa-download-header:hover {
+  /* No background or shadow on hover */
+}
+
+.victaa-download-header .victaa-download-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.victaa-download-nav-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.victaa-download-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(145, 74, 222);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 0.2rem;
+}
+
+.victaa-download-tagline {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 300;
+}
+
+/* Hero Section */
+.victaa-download-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 4rem 0 4rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.victaa-download-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+  pointer-events: none;
+  animation: victaaDownloadBackgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes victaaDownloadBackgroundShift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(10px) translateY(-5px); }
+  50% { transform: translateX(-5px) translateY(10px); }
+  75% { transform: translateX(5px) translateY(-10px); }
+}
+
+/* Floating Elements */
+.victaa-download-floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.victaa-download-floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: victaaDownloadFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.victaa-download-floating-element-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.victaa-download-floating-element-2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+.victaa-download-floating-element-3 {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 3s;
+}
+
+.victaa-download-floating-element-4 {
+  top: 40%;
+  right: 30%;
+  animation-delay: 4.5s;
+}
+
+@keyframes victaaDownloadFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(5deg); }
+  50% { transform: translateY(10px) rotate(-5deg); }
+  75% { transform: translateY(-15px) rotate(3deg); }
+}
+
+.victaa-download-hero-background {
+  position: relative;
+  z-index: 1;
+}
+
+.victaa-download-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.victaa-download-hero-heading {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
+}
+
+.victaa-download-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  min-height: 3.5rem;
+}
+
+.victaa-download-hero-title.typewriter {
+  white-space: nowrap;
+}
+
+.victaa-download-cursor {
+  animation: victaaDownloadBlink 1s infinite;
+  color: #ffd700;
+}
+
+@keyframes victaaDownloadBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.victaa-download-highlight {
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  animation: victaaDownloadGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes victaaDownloadGlow {
+  from { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px #ffd700; }
+  to { text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 20px #ffd700, 0 0 30px #ffd700; }
+}
+
+.victaa-download-hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 300;
+}
+
+.victaa-download-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: victaaDownloadFadeInUp 1s ease-out 2s forwards;
+}
+
+@keyframes victaaDownloadFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.victaa-download-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.victaa-download-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.victaa-download-btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.victaa-download-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.6);
+}
+
+.victaa-download-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.victaa-download-btn-primary:hover::before {
+  left: 100%;
+}
+
+.victaa-download-pulse {
+  animation: victaaDownloadPulse 2s infinite;
+}
+
+@keyframes victaaDownloadPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.victaa-download-btn-text {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.victaa-download-btn-icon {
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.victaa-download-btn:hover .victaa-download-btn-icon {
+  transform: translateX(3px);
+}
+
+.victaa-download-btn:hover .victaa-download-btn-text {
+  transform: translateX(-3px);
+}
+
+.victaa-download-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.victaa-download-btn-secondary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+.victaa-download-btn-outline {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.victaa-download-btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.victaa-download-main-content {
+  padding: 1rem 0 3rem 0;
+}
+
+/* Section Styles */
+.victaa-download-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.victaa-download-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.6s ease;
+}
+
+.victaa-download-section-title.animate-on-scroll::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Download Section */
+.victaa-download-section {
+  text-align: center;
+}
+
+.victaa-download-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.victaa-download-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: victaaDownloadSlideInFromBottom 0.6s ease-out;
+}
+
+@keyframes victaaDownloadSlideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.victaa-download-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.victaa-download-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.victaa-download-card.featured {
+  border-color: #ffd700;
+  transform: scale(1.05);
+}
+
+.victaa-download-featured-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #ffd700;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.victaa-download-ai-badge {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.victaa-download-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.victaa-download-description {
+  color: #1004b0;
+  margin-bottom: 1.5rem;
+}
+
+.victaa-download-features ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.victaa-download-features li {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+/* Professional Features Section Styles */
+.victaa-download-features-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.victaa-download-plus-divider {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #667eea;
+  margin: 0.2rem 0;
+}
+
+.victaa-download-includes-standard {
+  margin-bottom: 0;
+}
+
+.victaa-download-includes-standard h4 {
+  margin-bottom: 0;
+  color: #28a745;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.victaa-download-standard-note {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.victaa-download-ai-enhancements {
+  padding: 1rem;
+  background: #f0f8ff;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.victaa-download-ai-enhancements h4 {
+  margin-bottom: 1rem;
+  color: #667eea;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.victaa-download-ai-enhancements ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.victaa-download-ai-enhancements li {
+  margin-bottom: 0.5rem;
+  color: #495057;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.victaa-download-ai-enhancements li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: #667eea;
+  border-radius: 50%;
+}
+
+.victaa-download-ai-enhancement-card {
+  margin-bottom: 0;
+}
+
+.victaa-download-ai-enhancement-card h4 {
+  margin: 0;
+  color: #667eea;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.victaa-download-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.victaa-download-size {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Progress Bar Styles */
+.victaa-download-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.victaa-download-progress-fill {
+  height: 100%;
+  background: #667eea;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  animation: victaaDownloadProgressShine 2s infinite;
+}
+
+@keyframes victaaDownloadProgressShine {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+.victaa-download-progress-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.victaa-download-btn-download {
+  position: relative;
+  overflow: hidden;
+  min-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.victaa-download-btn-download:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.victaa-download-btn-download:disabled:hover {
+  transform: none;
+}
+
+/* Footer */
+.victaa-download-footer-section {
+  background: #333;
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+.victaa-download-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.victaa-download-footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.victaa-download-footer-section ul {
+  list-style: none;
+}
+
+.victaa-download-footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.victaa-download-footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.victaa-download-footer-section a:hover {
+  color: #ffd700;
+  transform: translateX(5px);
+}
+
+.victaa-download-footer-section p {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .victaa-download-hero {
+    padding: 2rem 0 2rem 0;
+  }
+  
+  .victaa-download-main-content {
+    padding: 0.5rem 0 2rem 0;
+  }
+  
+  .victaa-download-hero-heading {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .victaa-download-hero-title {
+    font-size: 2rem;
+    min-height: 2.5rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .victaa-download-hero-title.typewriter {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  
+  .victaa-download-hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+  
+  .victaa-download-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .victaa-download-hero-content {
+    padding: 0 1.5rem;
+  }
+  
+  .victaa-download-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .victaa-download-card.featured {
+    transform: none;
+    padding-top: 3rem;
+  }
+  
+  /* Mobile badge alignment fixes */
+  .victaa-download-featured-badge {
+    top: 10px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .victaa-download-ai-badge {
+    top: 10px;
+    left: 15px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Mobile download button fixes */
+  .victaa-download-footer {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .victaa-download-btn-download {
+    min-height: 45px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    width: auto;
+    max-width: 200px;
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-btn-text {
+    display: inline;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-btn-icon {
+    display: inline;
+    margin-left: 0.3rem;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-size {
+    text-align: left;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .victaa-download-hero {
+    padding: 1.5rem 0 1.5rem 0;
+  }
+  
+  .victaa-download-main-content {
+    padding: 0.25rem 0 1.5rem 0;
+  }
+  
+  .victaa-download-container {
+    padding: 0 15px;
+  }
+  
+  .victaa-download-hero-heading {
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .victaa-download-hero-title {
+    font-size: 1.8rem;
+    min-height: 2.2rem;
+    line-height: 1.1;
+    padding: 0 0.5rem;
+  }
+  
+  .victaa-download-hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+  }
+  
+  .victaa-download-hero-buttons {
+    padding: 0 0.5rem;
+  }
+  
+  .victaa-download-hero-content {
+    padding: 0 1rem;
+  }
+  
+  .victaa-download-section-title {
+    font-size: 2rem;
+  }
+  
+  /* Extra small mobile download button fixes */
+  .victaa-download-btn-download {
+    min-height: 40px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    max-width: 180px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-btn-text {
+    display: inline;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-btn-icon {
+    display: inline;
+    margin-left: 0.2rem;
+    white-space: nowrap;
+  }
+  
+  .victaa-download-card {
+    padding: 1.5rem;
+  }
+  
+  .victaa-download-card.featured {
+    padding-top: 2.5rem;
+  }
+  
+  /* Extra small mobile badge fixes */
+  .victaa-download-featured-badge {
+    top: 8px;
+    right: 10px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .victaa-download-ai-badge {
+    top: 8px;
+    left: 10px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .victaa-download-footer {
+    gap: 0.8rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .victaa-download-size {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+/* Footer responsive styles for download page */
+@media (max-width: 1200px) {
+  .victaa-download-page .vardaan-footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 60px 30px 30px;
+  }
+}
+
+/* Footer bottom section for download page */
+.victaa-download-page .vardaan-footer-bottom {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .victaa-download-page .vardaan-footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 20px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .victaa-download-page .vardaan-footer {
+    min-height: 400px;
+  }
+  
+  .victaa-download-page .vardaan-footer-content {
+    padding: 40px 15px 20px;
+    gap: 25px;
+  }
+} 

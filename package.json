@@ -1,0 +1,70 @@
+{
+  "name": "vardaands",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1490.0",
+    "axios": "^1.6.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "emailjs-com": "^3.2.0",
+    "env-cmd": "^10.1.0",
+    "express": "^4.18.2",
+    "firebase": "^11.10.0",
+    "form-data": "^4.0.4",
+    "fs-extra": "^11.2.0",
+    "gsap": "^3.13.0",
+    "libphonenumber-js": "^1.10.51",
+    "lucide-react": "^0.525.0",
+    "mime-types": "^2.1.35",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.5",
+    "nodemailer": "^6.9.8",
+    "path": "^0.12.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3",
+    "react-scripts": "5.0.1",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:backend": "node src/backend/server.js",
+    "start:dev": "concurrently \"npm run start:backend\" \"npm run start\"",
+    "build": "react-scripts build && npm run build:backend",
+    "build:backend": "node scripts/copy-backend.js",
+    "build:dev": "env-cmd -f .env.development react-scripts build && npm run build:backend",
+    "build:prod": "env-cmd -f .env.production react-scripts build && npm run build:backend",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

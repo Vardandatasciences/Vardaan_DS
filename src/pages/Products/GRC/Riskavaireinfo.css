@@ -1,0 +1,763 @@
+  .riskavaire-info {
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 5px 20px 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+/* Header Section */
+.riskavaire-header {
+  position: relative;
+  background-color: #374151;
+  padding: 60px 20px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.riskavaire-logo {
+  width: 300px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Main Heading */
+.main-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.title-line-1 {
+  margin-bottom: 10px;
+}
+
+.title-line-2 {
+  text-indent: 40px;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.2rem;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+/* Body Paragraph */
+.body-paragraph {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Problem Card */
+.problem-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 60px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.problem-title {
+  color: #dc2626;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.problem-list li {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.problem-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #dc2626;
+  border-radius: 50%;
+}
+
+/* Solution Card */
+.solution-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 60px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.solution-title {
+  color: #2563eb;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.solution-intro {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.riskavaire-name {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.inline-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solution-list li {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.solution-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Urgency Section */
+.urgency-section {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.urgency-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.urgency-content {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.urgency-content p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* RiskaVaire Response Section */
+.riskavaire-response-section {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.response-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.response-content {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.response-content p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Feature Set Section */
+.feature-set-section {
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.feature-set-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Competitive Edge Section */
+.competitive-edge-section {
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.competitive-edge-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.comparison-table {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.table-header {
+  display: grid !important;
+  grid-template-columns: 250px 1fr 1fr !important;
+  width: 100% !important;
+}
+
+.header-cell {
+  padding: 24px 20px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+.header-cell:last-child {
+  border-right: none;
+}
+
+.feature-header {
+  background: #f8f9fa;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.riskavaire-header {
+  background: #374151 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+.legacy-header {
+  background: #f8f9fa;
+  color: #64748b;
+  text-align: center;
+}
+
+.table-row {
+  display: grid !important;
+  grid-template-columns: 250px 1fr 1fr !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  width: 100% !important;
+}
+
+.table-row:last-child {
+  border-bottom: none !important;
+}
+
+.cell {
+  padding: 20px !important;
+  border-right: 1px solid #e2e8f0 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+.feature-cell {
+  background: #ffffff;
+  color: #1a1a1a;
+  font-weight: 600;
+  justify-content: flex-start;
+  min-height: 60px;
+}
+
+.riskavaire-cell {
+  background: #374151 !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  min-height: 60px !important;
+}
+
+.legacy-cell {
+  background: #ffffff;
+  color: #64748b;
+  font-weight: 400;
+  justify-content: center;
+  white-space: nowrap;
+  min-height: 60px;
+}
+
+/* Designed For Section */
+.designed-for-section {
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.designed-for-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.industry-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.industry-item svg {
+  margin-bottom: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.industry-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Demo Section - Call to Action */
+.demo-wrapper {
+  background: #475569;
+  padding: 60px 0 0 0;
+  margin: 80px -20px 0 -20px;
+  width: calc(100% + 40px);
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-content {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-headline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.demo-subheadline {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 0 30px 0;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.demo-button {
+  background: white;
+  color: #1e3a8a;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: #f8fafc;
+}
+
+.demo-icon {
+  color: #1e3a8a;
+}
+
+.demo-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 20px 40px 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-info-footer {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-icon-footer {
+  color: white;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 2.4rem;
+  }
+  
+  .cards-container {
+    gap: 30px;
+  }
+  
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .comparison-table {
+    max-width: 700px;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 200px 1fr 1fr;
+  }
+  
+  .header-cell,
+  .cell {
+    padding: 16px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .industry-icons {
+    gap: 20px;
+  }
+  
+  .demo-headline {
+    font-size: 2rem;
+  }
+  
+  .riskavaire-logo {
+    width: 250px;
+    height: 100px;
+  }
+  
+  .riskavaire-header {
+    padding: 50px 20px;
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .riskavaire-info {
+    padding: 30px 15px;
+  }
+  
+  .main-heading {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .problem-card,
+  .solution-card {
+    padding: 30px 25px;
+  }
+  
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 500px;
+  }
+  
+  .feature-card {
+    padding: 25px 20px;
+  }
+  
+  .feature-set-heading {
+    font-size: 2rem;
+  }
+  
+  .competitive-edge-heading {
+    font-size: 1.8rem;
+  }
+  
+  .comparison-table {
+    max-width: 100%;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 150px 1fr 1fr;
+  }
+  
+  .header-cell,
+  .cell {
+    padding: 14px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .designed-for-heading {
+    font-size: 1.8rem;
+  }
+  
+  .industry-icons {
+    gap: 15px;
+  }
+  
+  .industry-item {
+    min-width: 80px;
+  }
+  
+  .industry-item svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .demo-headline {
+    font-size: 1.8rem;
+  }
+  
+  .demo-subheadline {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-footer {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .riskavaire-logo {
+    width: 200px;
+    height: 80px;
+  }
+  
+  .riskavaire-header {
+    padding: 40px 20px;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.6rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .body-paragraph {
+    font-size: 1rem;
+  }
+  
+  .problem-card,
+  .solution-card {
+    padding: 25px 20px;
+  }
+}

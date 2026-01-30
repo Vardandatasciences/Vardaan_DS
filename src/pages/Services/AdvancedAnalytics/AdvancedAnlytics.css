@@ -1,0 +1,755 @@
+/* AdvancedAnalytics.css */
+
+/* Analytics Container */
+.analytics-container {
+    min-height: 100vh;
+    background-color: white;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    animation: heroImageScale 20s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+    animation: fadeInOverlay 1.5s ease-out forwards;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+}
+
+.hero-subtitle {
+    background: linear-gradient(to right, #60A5FA, #A78BFA, #FB923C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.intro-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .intro-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro-container {
+        padding: 0 2rem;
+    }
+}
+
+.intro-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+/* Add specific styling for the second row */
+.intro-row:last-child .points-container {
+    padding-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .intro-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+}
+
+/* Points Styling */
+.points-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.check-icon {
+    color: #22C55E;
+    margin-top: 0.375rem;
+    font-size: 1.25rem;
+}
+
+.point-text {
+    font-size: 1.125rem;
+    color: #374151;
+}
+
+/* Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero section styles */
+.hero-section {
+    background-color: #0a192f;
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scale-image {
+    transform-origin: center;
+    animation: scaleImage 20s ease-in-out infinite alternate;
+}
+
+.hero-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.hero-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 1s ease-out forwards;
+    animation-delay: 0.5s;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    margin-top: 0.5em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUpFade 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes scaleImage {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Floating elements animation */
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) { animation-delay: 2s; }
+.floating-element:nth-child(3) { animation-delay: 4s; }
+.floating-element:nth-child(4) { animation-delay: 1s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .hero-title-container {
+        min-height: 40vh;
+    }
+
+    .floating-element {
+        display: none;
+    }
+
+    .prose {
+        font-size: 1rem;
+    }
+    
+    .animate-on-scroll img {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    .service-card::before, .benefit-card::before {
+        background: none;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .floating-element {
+        animation: none;
+    }
+    
+    .service-card:hover, .benefit-card:hover {
+        transform: none;
+    }
+
+    .hero-section:hover img {
+        transform: none;
+    }
+
+    .scale-image {
+        animation: none;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .floating-element {
+        display: none;
+    }
+    
+    .service-card, .benefit-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+}
+
+/* Hero Animations */
+@keyframes heroImageScale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Client Benefits Section */
+.client-benefits {
+    padding: 1rem 0;
+    background-color: white;
+}
+
+.client-benefits-container {
+    max-width: 1200px;
+    margin: -2rem auto 0;
+    padding: 0 1rem;
+}
+
+.advanced-analytics-benefits-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.advanced-analytics-benefits-heading h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin: 0;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .advanced-analytics-benefits-heading h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .advanced-analytics-benefits-heading h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .advanced-analytics-benefits-heading h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    perspective: 1000px;
+    height: 450px;  /* Increased height to accommodate title below */
+}
+
+/* Flip card container */
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 85%;  /* Reduced to make room for title below */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.benefit-item:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+}
+
+.flip-card-front {
+    background-color: white;
+}
+
+/* Different colors for each card back */
+.flip-card-back {
+    color: #333;  /* Darker text for better readability */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    text-align: left;
+}
+
+/* Light blue for Predictive Insights */
+.flip-card-back.predictive {
+    background-color: #E3F2FD;
+}
+
+/* Light green for Process Optimization */
+.flip-card-back.process {
+    background-color: #E8F5E9;
+}
+
+/* Light purple for Innovation Enablement */
+.flip-card-back.innovation {
+    background-color: #F3E5F5;
+}
+
+.flip-card-back h3 {
+    display: none; /* Hide the heading in the flipped content */
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.benefit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.benefit-title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .benefit-item {
+        height: 400px;
+    }
+    
+    .flip-card-back {
+        padding: 1.5rem;
+    }
+    
+    .flip-card-back h3 {
+        font-size: 1.25rem;
+    }
+    
+    .flip-card-back p {
+        font-size: 0.9rem;
+    }
+
+    .benefit-title {
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+    }
+}
+
+/* Responsive breakpoints */
+/* Extra small devices (phones) */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+    }
+
+    .intro-image {
+        height: 200px !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 0 1rem;
+    }
+
+    .benefit-item {
+        height: 350px !important;
+        margin-bottom: 1rem;
+    }
+
+    .client-benefits-container {
+        margin-top: 0;
+    }
+
+    .client-benefits-heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .points-container {
+        padding: 0 1rem;
+        margin-top: -2rem;
+    }
+
+    .point-text {
+        font-size: 1rem !important;
+    }
+
+    /* Reorder elements in second row for mobile */
+    .intro-row:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-row:last-child .image-container {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .intro-row:last-child .points-container {
+        order: 2;
+        padding-top: 0;
+        margin-top: -2rem;
+    }
+}
+
+/* Small devices (large phones, tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .intro-image {
+        height: 250px !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    .benefit-item {
+        height: 420px !important;
+    }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+
+    .benefit-item {
+        height: 450px !important;
+    }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .benefits-grid {
+        gap: 1.5rem !important;
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media screen and (min-width: 1201px) {
+    .benefits-grid {
+        gap: 2rem !important;
+    }
+}
+
+/* Laptop screens with different aspect ratios */
+@media screen and (min-width: 1024px) and (max-height: 768px) {
+    .hero-section {
+        min-height: 75vh;
+    }
+}
+
+/* High-resolution screens */
+@media screen and (min-width: 1920px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 4rem !important;
+    }
+
+    .intro-container {
+        max-width: 90rem;
+    }
+}
+
+/* Handle ultrawide screens */
+@media screen and (min-width: 2560px) {
+    .intro-container,
+    .client-benefits-container {
+        max-width: 100rem;
+    }
+}
+
+/* Ensure images don't overflow on any screen size */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve touch targets for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .benefit-item,
+    .nav-link,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Handle device orientations */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .hero-section {
+        min-height: 100vh;
+    }
+}
+
+/* Ensure proper scaling on retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+@media (max-width: 1023px) {
+    .intro-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-row .image-container {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .intro-row .points-container {
+        order: 2;
+        padding-top: 0;
+    }
+
+    /* Reset padding for second row points container */
+    .intro-row:last-child .points-container {
+        padding-top: 0;
+    }
+}
+

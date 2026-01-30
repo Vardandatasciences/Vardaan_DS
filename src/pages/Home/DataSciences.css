@@ -1,0 +1,1166 @@
+/* Wrapper to contain the entire section - FIXED */
+.data-sciences-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Changed from 'auto' to '100vh' */
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+/* Main container for content - FIXED */
+.data-sciences-main-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Changed from '150%' to '100%' */
+  display: flex;
+  margin-top: 0; /* Changed from '-80px' to '0' */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make sure the container height doesn't depend on scrolling - REMOVED DUPLICATE */
+
+/* Add this new rule to ensure no extra spacing after the component */
+.datasciences-container + * {
+  margin-top: 0 !important;
+}
+
+/* Add this new rule to ensure no extra spacing before the component */
+* + .datasciences-container {
+  margin-top: 0 !important;
+}
+
+/* Ensure parent elements don't add spacing */
+.datasciences-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Force remove any spacing from parent containers */
+.datasciences-container::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Reduce from -50px to -10px */
+  left: 0;
+  right: 0;
+  height: 10px; /* Reduce from 50px to 10px */
+  background: #ffffff;
+  z-index: -1;
+}
+
+/* Additional fix for any section spacing */
+section + .datasciences-container,
+div + .datasciences-container,
+.expertise-section + .datasciences-container,
+.our-expertise + .datasciences-container {
+  margin-top: -10px !important; /* Reduce from -50px to -10px */
+  padding-top: 0 !important;
+}
+
+/* Target the previous section specifically */
+.our-expertise,
+.expertise-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Alternative approach - if still showing white space, try this */
+.datasciences-container {
+  position: relative;
+  z-index: 5; /* Reduce from 10 to 5 to not overlap content */
+  margin-top: -20px !important; /* Try -20px if -10px isn't enough */
+  padding-top: 20px !important; /* Add padding to compensate for content */
+}
+
+/* Ensure the wrapper doesn't add extra space */
+.data-sciences-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 5;
+  margin-top: -20px; /* Pull the wrapper up */
+  padding-top: 20px; /* Add padding to maintain content positioning */
+}
+
+/* Ensure the component starts at the very top of its container */
+.datasciences-container {
+  position: relative;
+  z-index: 5;
+  top: 0;
+  transform: translateY(-10px); /* Reduce from -50px to -10px */
+  height: 100vh !important; /* Keep this as is */
+  overflow: hidden;
+  margin: 0 !important; /* Remove ALL margins */
+  margin-top: -10px !important; /* Reduce from -50px to -10px */
+  padding: 0; /* Remove padding for full-width experience */
+}
+
+/* Rest of your existing styles remain the same */
+.data-sciences-container {
+  margin: 0 !important; /* Remove all margins including the negative margin-top */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 6rem 6rem 6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  overflow: hidden;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Remove any background gradients or overlays */
+.data-sciences-container::before,
+.data-sciences-container::after {
+  display: none;
+}
+
+/* Update text content background */
+.text-content {
+  max-width: 50%;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+/* Update video content background */
+.video-content {
+  max-width: 30%;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+/* Clean up any residual backgrounds */
+body {
+  background: #ffffff;
+}
+
+.data-sciences-container > * {
+  background: transparent;
+}
+
+/* Ensure video container is transparent */
+.video-content video {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ZIG-ZAG LAYOUT: Every even container styles */
+.data-sciences-container:nth-child(even) {
+  flex-direction: row-reverse; /* Reverse the text and media layout */
+}
+
+/* Default animation for text (odd-numbered divs) */
+.text-content {
+  max-width: 50%;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-100px); /* Default: Slide in from left */
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Even div's text moves in from the right */
+.data-sciences-container:nth-child(even) .text-content {
+  transform: translateX(100px);
+}
+
+/* When in viewport, smoothly appear */
+.animate-text {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Base title styles */
+.text-content h1, .text-content h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  display: block;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Data Sciences (First section) */
+.data-sciences-container:nth-child(1) h1:first-child {
+  color: #1a237e;
+  text-shadow: 2px 2px 4px rgba(26, 35, 126, 0.2);
+}
+
+.data-sciences-container:nth-child(1) h1:last-child {
+  color: #3949ab;
+  text-shadow: 2px 2px 4px rgba(57, 73, 171, 0.2);
+}
+
+.data-sciences-container:nth-child(1) h1:last-child::after {
+  background: linear-gradient(to right, #1a237e, #3949ab);
+}
+
+/* Artificial Intelligence (Second section) */
+.data-sciences-container:nth-child(2) h2 {
+  background: linear-gradient(45deg, #FF416C, #FF4B2B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(255, 65, 108, 0.2);
+}
+
+.data-sciences-container:nth-child(2) h2::after {
+  background: linear-gradient(to right, #FF416C, #FF4B2B);
+}
+
+/* Image Processing (Third section) */
+.data-sciences-container:nth-child(3) h2 {
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(17, 153, 142, 0.2);
+}
+
+.data-sciences-container:nth-child(3) h2::after {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
+/* Web Development (Fourth section) */
+.data-sciences-container:nth-child(4) h2 {
+  background: linear-gradient(45deg, #6D48E5, #9B6DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(109, 72, 229, 0.2);
+}
+
+.data-sciences-container:nth-child(4) h2::after {
+  background: linear-gradient(to right, #6D48E5, #9B6DFF);
+}
+
+/* Mobile Development (Fifth section) */
+.data-sciences-container:nth-child(5) h2 {
+  background: linear-gradient(45deg, #00B4DB, #0083B0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 180, 219, 0.2);
+}
+
+.data-sciences-container:nth-child(5) h2::after {
+  background: linear-gradient(to right, #00B4DB, #0083B0);
+}
+
+/* Common underline styles for all sections except Data Sciences */
+.data-sciences-container:nth-child(n+2) h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 8px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: expandUnderline 0.8s ease-out 0.3s forwards;
+}
+
+/* Add hover animations */
+.text-content h1:hover, .text-content h2:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Add new animations */
+@keyframes titleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to titles */
+.text-content h1, .text-content h2 {
+  animation: titleFadeIn 0.8s ease-out forwards;
+}
+
+.data-sciences-container:nth-child(even) .text-content h2 {
+  animation: titleSlideIn 0.8s ease-out forwards;
+}
+
+/* Add shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-content h1, .text-content h2 {
+  background-size: 200% auto;
+  animation: 
+    titleFadeIn 0.8s ease-out forwards,
+    shimmer 3s linear infinite;
+}
+
+/* Update paragraph text */
+.text-content p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+/* Remove old underline class since we're using animated underline */
+.underline {
+  display: none;
+}
+
+/* Add new animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandUnderline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Remove the shimmer effect temporarily */
+.text-content h1, .text-content h2 {
+  background: none; /* Remove gradient background */
+  color: #4A3AFF; /* Use solid color */
+  -webkit-text-fill-color: initial; /* Reset text fill color */
+}
+
+/* Explore Button */
+.explore-button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #4A3AFF;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.7s forwards;
+}
+
+.explore-button:hover {
+  background-color: #565dea;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(74, 58, 255, 0.3);
+}
+
+/* Default animation for videos */
+.video-content {
+  max-width: 40%;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+  display: flex;
+  justify-content: center;
+}
+
+/* Even div's video moves in from the left */
+.data-sciences-container:nth-child(even) .video-content {
+  transform: translateX(-100px);
+}
+
+/* When in viewport, smoothly appear */
+.animate-video {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Video styles */
+.video-content video {
+  width: 350px;
+  height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE CONTENT */
+.image-content {
+  max-width: 50%;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Even div's image moves in from the left */
+.data-sciences-container:nth-child(even) .image-content {
+  transform: translateX(-100px);
+}
+
+/* When in viewport, smoothly appear */
+.animate-image {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+  .video-content video {
+    width: 300px;
+    height: 350px;
+  }
+
+  .text-content h1, .text-content h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .data-sciences-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .video-content {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .video-content video {
+    width: 250px;
+    height: 300px;
+  }
+
+  .text-content h1, .text-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .arrow-btn {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .arrow-btn::before {
+    width: 16px;
+    height: 16px;
+    border-width: 2.5px 2.5px 0 0;
+  }
+  
+  .arrow-btn.left {
+    left: 20px;
+  }
+  
+  .arrow-btn.right {
+    right: 20px;
+  }
+
+  .navigation-arrow {
+    opacity: 1 !important; /* Always show arrows on mobile/tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-content h1, .text-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .explore-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .arrow-btn {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .arrow-btn::before {
+    width: 14px;
+    height: 14px;
+    border-width: 2px 2px 0 0;
+  }
+  
+  .arrow-btn.left {
+    left: 15px;
+  }
+  
+  .arrow-btn.right {
+    right: 15px;
+  }
+  
+  .data-sciences-section {
+    flex-direction: column;
+  }
+  
+  .section-text-side, 
+  .section-video-side {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .section-text-side {
+    order: 1;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .section-video-side {
+    order: 0;
+    height: 40%;
+  }
+  
+  .content-box {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .section-underline {
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-content video {
+    width: 220px;
+    height: 280px;
+  }
+
+  .text-content h1, .text-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .arrow-btn::before {
+    width: 12px;
+    height: 12px;
+    border-width: 2px 2px 0 0;
+  }
+  
+  .arrow-btn.left {
+    left: 10px;
+  }
+  
+  .arrow-btn.right {
+    right: 10px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .section-video-side {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navigation-arrow {
+    top: 60% !important;
+    /* Removed left: 0; right: 0; to allow individual arrow positioning */
+  }
+  .left-arrow {
+    left: 10px !important;
+    right: auto;
+  }
+  .right-arrow {
+    right: 10px !important;
+    left: auto;
+  }
+}
+
+/* Styles for each content section */
+.data-sciences-section {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+/* Direction-based transitions */
+.data-sciences-section.next {
+  transform: translateX(100px); /* Off-screen to the right */
+}
+
+.data-sciences-section.prev {
+  transform: translateX(-100px); /* Off-screen to the left */
+}
+
+/* Active slide is centered */
+.data-sciences-section.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  transform: translateX(0); /* Centered when active */
+}
+
+/* Different animation speeds based on direction */
+.data-sciences-section.next.slideDirection {
+  transition-duration: 0.5s;
+}
+
+.data-sciences-section.prev.slideDirection {
+  transition-duration: 0.5s;
+}
+
+/* Different transitions based on direction of movement */
+.data-sciences-section.next.prev {
+  transform: translateX(100px); /* Moving from right to left */
+}
+
+.data-sciences-section.prev.next {
+  transform: translateX(-100px); /* Moving from left to right */
+}
+
+/* Text side styling */
+.section-text-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+
+/* Content box styling */
+.content-box {
+  max-width: 80%;
+}
+
+/* Title styling */
+.section-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.data-sciences-section.active .section-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.data-sciences-section.active .section-title:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+/* Underline styling */
+.section-underline {
+  height: 4px;
+  width: 60px;
+  border-radius: 2px;
+  margin: 15px 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.data-sciences-section.active .section-underline {
+  opacity: 1;
+  transform: scaleX(1);
+  transition-delay: 0.3s;
+}
+
+/* Description styling */
+.section-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  margin: 1.5rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.data-sciences-section.active .section-description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+/* Remove button styling */
+.section-button,
+.data-sciences-section.active .section-button {
+  display: none;
+}
+
+/* Video side styling */
+.section-video-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media content styling */
+.fullscreen-media, 
+.gif-container {
+  max-width: 70%;
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.data-sciences-section.active .fullscreen-media,
+.data-sciences-section.active .gif-container {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.fullscreen-media {
+  object-fit: contain;
+}
+
+.gif-container {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gif-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Remove unnecessary scroll progress styles */
+.scroll-progress {
+  display: none; /* Hide the vertical dots */
+}
+
+/* Remove arrow button styles */
+.arrow-btn {
+  display: none;
+}
+
+/* Navigation Arrows Styles */
+.navigation-arrow {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  color: #666;
+  padding: 0;
+  opacity: 0; /* Hide arrows by default */
+}
+
+/* Show arrows on section hover */
+.datasciences-container:hover .navigation-arrow {
+  opacity: 1;
+}
+
+.navigation-arrow:hover {
+  background-color: transparent;
+  box-shadow: none;
+  transform: translateY(-50%) scale(1.05);
+  color: #333;
+}
+
+.navigation-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Always show the arrow when it's disabled and section is being hovered */
+.datasciences-container:hover .navigation-arrow:disabled {
+  opacity: 0.4;
+}
+
+.left-arrow {
+  left: 25px;
+}
+
+.right-arrow {
+  right: 25px;
+}
+
+.navigation-arrow svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.5;
+}
+
+/* Responsive styles for navigation arrows */
+@media (max-width: 1024px) {
+  .navigation-arrow svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-arrow {
+    left: 15px;
+  }
+  
+  .right-arrow {
+    right: 15px;
+  }
+  
+  .navigation-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-arrow {
+    left: 10px !important;
+  }
+  
+  .right-arrow {
+    right: 10px !important;
+  }
+  
+  .navigation-arrow svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Pagination Dots Styles */
+.pagination-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(56, 182, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.pagination-dot:hover {
+  background-color: rgba(56, 182, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.pagination-dot.active {
+  width: 16px;
+  border-radius: 4px;
+  background-color: #38b6ff;
+  transform: scale(1);
+}
+
+/* Responsive styles for pagination dots */
+@media (max-width: 768px) {
+  .pagination-dots {
+    bottom: 10px;
+    gap: 2px;
+    transform: translateX(-50%) scale(0.4);
+  }
+  .pagination-dot {
+    width: 3px;
+    height: 3px;
+  }
+  .pagination-dot.active {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-dots {
+    bottom: 4px;
+    gap: 1px;
+    transform: translateX(-50%) scale(0.25);
+  }
+  .pagination-dot {
+    width: 2px;
+    height: 2px;
+  }
+  .pagination-dot.active {
+    width: 4px;
+    height: 2px;
+  }
+  .pagination-dot:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Improved transitions for content elements with slight delays */
+.data-sciences-section .section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.data-sciences-section .section-underline {
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.data-sciences-section .section-description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.data-sciences-section .fullscreen-media,
+.data-sciences-section .gif-container {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.data-sciences-section.active .section-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.data-sciences-section.active .section-title:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.data-sciences-section.active .section-underline {
+  opacity: 1;
+  transform: scaleX(1);
+  transition-delay: 0.3s;
+}
+
+.data-sciences-section.active .section-description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.data-sciences-section.active .fullscreen-media,
+.data-sciences-section.active .gif-container {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* Fix for Safari mobile */
+@supports (-webkit-touch-callout: none) {
+  .data-sciences-wrapper,
+  .data-sciences-main-container {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    will-change: transform;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .data-sciences-section {
+    flex-direction: column;
+  }
+  
+  .section-text-side, 
+  .section-video-side {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+  
+  .section-text-side {
+    order: 1;
+    justify-content: center !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+  
+  .section-video-side {
+    order: 0;
+    height: 40% !important;
+  }
+  
+  .content-box {
+    text-align: center;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+  
+  .section-underline {
+    margin: 15px auto;
+  }
+  
+  .scroll-progress {
+    right: 10px;
+  }
+  
+  .progress-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .progress-dot.active {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .section-description {
+    font-size: 1rem !important;
+  }
+  
+  .fullscreen-media,
+  .gif-container {
+    max-width: 80%;
+    max-height: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .scroll-indicator {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-arrow {
+    top: 60% !important;
+    /* Removed left: 0; right: 0; to allow individual arrow positioning */
+  }
+  .left-arrow {
+    left: 10px !important;
+    right: auto;
+  }
+  .right-arrow {
+    right: 10px !important;
+    left: auto;
+  }
+}

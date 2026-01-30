@@ -1,0 +1,843 @@
+/* Global overflow prevention */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Additional container fixes */
+.App {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* src/ImageWithText.css */
+.image-container {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ 
+}
+ 
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  text-align: center;
+}
+ 
+.text-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+ 
+.text-overlay h1 .highlight {
+  color: #007BFF;
+  position: relative;
+  display: inline-block;
+}
+ 
+.text-overlay h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #007BFF;
+  animation: underlineAnimation 2s ease-in-out infinite;
+}
+ 
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+ 
+.text-overlay p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #000;
+}
+ 
+.hero-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+  overflow-x: hidden;
+  background: white;
+  background-image:
+    repeating-linear-gradient(
+      120deg,
+      rgba(219, 234, 254, 0.03) 0px,
+      rgba(219, 234, 254, 0.03) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 80% 50%, rgba(147, 197, 253, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 20%, rgba(96, 165, 250, 0.05) 0%, transparent 30%);
+}
+ 
+/* Diagonal cut design with gradient background - updated to 40 degrees */
+.diagonal-cut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa, #93c5fd, #bfdbfe, #2563eb, #1d4ed8);
+  background-size: 1400% 1400%;
+  animation: gradientRipple 18s ease infinite;
+  /* Update clip-path to create a 40-degree angle */
+  clip-path: polygon(0 0, 100% 0, 30% 100%, 0 100%);
+  z-index: 0;
+}
+ 
+@keyframes gradientRipple {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1.0);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  25% {
+    background-position: 50% 100%;
+    transform: scale(1.05);
+    filter: hue-rotate(15deg) brightness(1.1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.0);
+    filter: hue-rotate(30deg) brightness(1.05);
+  }
+  75% {
+    background-position: 50% 0%;
+    transform: scale(1.05);
+    filter: hue-rotate(15deg) brightness(1.1);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1.0);
+    filter: hue-rotate(0deg) brightness(1);
+  }
+}
+ 
+/* Update the gradient overlay to match the new angle */
+.hero-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(140deg, transparent 30%, rgba(147, 197, 253, 0.08) 30%);
+  z-index: 1;
+  pointer-events: none;
+}
+ 
+/* Update the border highlight to match the 40-degree angle */
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  /* Create a subtle highlight along the diagonal */
+  border-right: 2px solid rgba(147, 197, 253, 0.4);
+  transform: skewX(50deg); /* Adjust to create 40-degree effect */
+  transform-origin: top;
+  z-index: 2;
+  pointer-events: none;
+}
+ 
+
+ 
+/* Remove CTA button styles */
+.cta-button {
+  display: none;
+}
+ 
+
+ 
+/* API endpoint style */
+.api-url {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-top: 5px;
+  border: 1px solid #e2e8f0;
+}
+ 
+.api-url code {
+  font-family: monospace;
+  color: #3a7bd5;
+  font-size: 14px;
+}
+ 
+.copy-btn {
+  background-color: #3a7bd5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+ 
+.copy-btn:hover {
+  background-color: #3a7bd5;
+}
+ 
+.metric-details {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+ 
+.metric-time {
+  font-size: 12px;
+  color: #999;
+}
+ 
+/* Magazine display styles */
+.magazine-display {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+ 
+.magazine-cover {
+  width: 100px;
+  height: 120px;
+  background: linear-gradient(135deg, #a66bff, #d87bff);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(166, 107, 255, 0.3);
+  margin-right: 15px;
+}
+ 
+.issue-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+ 
+.magazine-art {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, #ffcc66, rgba(255,255,255,0));
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+ 
+.magazine-info {
+  flex: 1;
+}
+ 
+.magazine-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+ 
+.magazine-price {
+  font-size: 14px;
+  color: #666;
+}
+ 
+/* Payment options styles */
+.payment-options {
+  margin: 20px 0;
+}
+ 
+.apple-pay-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ 
+.apple-logo::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='white' d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}
+ 
+.alternative-payment {
+  text-align: center;
+  margin: 15px 0;
+  color: #666;
+  font-size: 14px;
+  position: relative;
+}
+ 
+.alternative-payment::before,
+.alternative-payment::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background-color: #ddd;
+}
+ 
+.alternative-payment::before {
+  left: 0;
+}
+ 
+.alternative-payment::after {
+  right: 0;
+}
+ 
+/* Payment form styles */
+.payment-form {
+  margin-top: 20px;
+}
+ 
+.form-group {
+  margin-bottom: 15px;
+}
+ 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+ 
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+}
+ 
+.card-input-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+ 
+.card-number {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+ 
+.card-details {
+  display: flex;
+  gap: 10px;
+}
+ 
+.card-date, .card-cvc {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+ 
+.card-brands {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  gap: 5px;
+}
+ 
+.card-brand {
+  width: 30px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+ 
+.card-brand.visa {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%231434CB' d='M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z'%3E%3C/path%3E%3C/svg%3E");
+}
+ 
+.card-brand.mastercard {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23eb001b' d='M302.2 201.2h-66.4c0-9.8.6-19.6 3.3-33.2h-45.2c-2.7 13.6-3.3 23.4-3.3 33.2H124c0 11.8.9 20.7 3.3 33.2h45.3c-2.3 13.6-3.3 23.4-3.3 33.2h66.4c0-9.8.6-19.6 3.3-33.2h-45.2c-2.7 13.6-3.3 23.4-3.3 33.2H124'/%3E%3Cpath fill='%23f79e1b' d='M320 402.6c-29.3 0-38.9-7.2-38.9-22.7 0-8.4 4.2-15.4 17.3-22.6 0 0 21.9 5.5 21.9 22.6s-8.9 22.7-21.9 22.7'/%3E%3C/svg%3E");
+}
+ 
+.card-brand.amex {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23006FCF' d='M325.1 167.8c0-16.4-14.1-18.4-27.4-18.4l-39.1-.3v69.3H275V204h18.4c13.1 0 27.1-2.9 27.1-18.4v-17.8zm-15.3 0c0 9.8-10.4 10.7-19.5 10.7h-21.9v-22.9h21.2c10 0 20.2.7 20.2 12.2zm51.4-57.2h-61.6v138.9h61.6v-29.7H338V234h37.5v-21.2H338v-20.2h38.6zM576 280.6v-99.3c0-23.8-5.4-38.9-26.6-38.9h-23.6v169.4h23.6c18.4-.1 26.6-14 26.6-31.2zm-15.3-29.9c0 15.2-5.2 22.1-19.9 22.1H535V182.5h5.8c15 0 19.9 7.3 19.9 23.4zM15.3 181.2H0v169.4h151.6v-30.7h-75.3v-138.7zm387.3-58.5v169.4h-31.2v-74.2l-45.8 74.2H305v-69.3l-43.5 69.3h-24.6l-39.3-138.2h32.8l27.4 93 30.2-44.7h23.6l29.7 45.2v-45.2h33.1v94.2l29.3-94.2zM576 415.6v-64h-32.8v169.4H576v-60.9h34.8v60.9h31.7V351.6h-66.5z'%3E%3C/path%3E%3C/svg%3E");
+}
+ 
+.card-brand.discover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='%23FF6000' d='M520.4 196.1c0-7.9-5.5-12.1-15.6-12.1h-4.9v24.9h4.7c10.3 0 15.8-4.4 15.8-12.8zM528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-44.1 138.9c22.6 0 52.9 16.9 52.9 50 0 30.7-28.6 50.1-56.7 50.1h-27.8v41.2h-47.6V170.9h79.2zm-144.8 90l-61.1-90h53.1l31.2 46.6 26.2-46.6h53.1l-59.5 87.7 65.2 98.9h-52.7l-36-54.7-30.2 54.7h-51.6zm-47.8-41.9h-32.1c-2.2 0-3.9 1.9-3.9 3.9 0 2.2 1.7 3.9 3.9 3.9h32.2c2.2 0 3.9-1.7 3.9-3.9-.1-2.2-1.9-3.9-4-3.9zm89.8 110.9c-53.8 0-53.8-75.7 0-75.7 53.9 0 53.8 75.7 0 75.7zm-75.7-49.5v92.9h44.8c90.5 0 90.5-139.1 0-139.1h-44.8z'%3E%3C/path%3E%3C/svg%3E");
+}
+ 
+.zip {
+  max-width: 200px;
+}
+ 
+@media (max-width: 576px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .hero-container {
+    padding: 50px 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .diagonal-cut {
+    max-width: 100%;
+  }
+  
+  .particles,
+  .gradient-waves,
+  .diagonal-bars,
+  .light-streaks {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .color-bar {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .light-streak {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .wave {
+    max-width: 100%;
+    width: 100%;
+  }
+ 
+  .card-details {
+    flex-direction: column;
+  }
+}
+
+/* Additional mobile fixes for very small screens */
+@media (max-width: 320px) {
+  .hero-container {
+    padding: 30px 10px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+ 
+/* Add this to your CSS */
+.preview-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 10;
+}
+ 
+/* Add new elements for animated particles */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+ 
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.4);
+  animation: float 15s infinite linear;
+  opacity: 0;
+}
+ 
+.particle:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  animation-duration: 25s;
+  animation-delay: 0s;
+}
+ 
+.particle:nth-child(2) {
+  top: 60%;
+  left: 5%;
+  width: 12px;
+  height: 12px;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+ 
+.particle:nth-child(3) {
+  top: 40%;
+  left: 20%;
+  width: 18px;
+  height: 18px;
+  animation-duration: 22s;
+  animation-delay: 4s;
+}
+ 
+.particle:nth-child(4) {
+  top: 80%;
+  left: 15%;
+  width: 10px;
+  height: 10px;
+  animation-duration: 18s;
+  animation-delay: 1s;
+}
+ 
+.particle:nth-child(5) {
+  top: 30%;
+  left: 25%;
+  width: 14px;
+  height: 14px;
+  animation-duration: 23s;
+  animation-delay: 3s;
+}
+ 
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-50px) translateX(250px) rotate(360deg);
+    opacity: 0;
+  }
+}
+ 
+/* Add animated gradient waves */
+.gradient-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+ 
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    rgba(59, 130, 246, 0) 0%,
+    rgba(59, 130, 246, 0.08) 50%,
+    rgba(59, 130, 246, 0) 100%);
+  animation: waveFlow 8s infinite linear;
+  transform-origin: center;
+}
+ 
+.wave:nth-child(1) {
+  animation-duration: 8s;
+  animation-delay: 0s;
+  transform: rotate(40deg);
+}
+ 
+.wave:nth-child(2) {
+  animation-duration: 10s;
+  animation-delay: 1s;
+  transform: rotate(90deg);
+}
+ 
+.wave:nth-child(3) {
+  animation-duration: 12s;
+  animation-delay: 2s;
+  transform: rotate(140deg);
+}
+ 
+@keyframes waveFlow {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+ 
+/* Add diagonal color bars that follow the 70-degree angle */
+.diagonal-bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+ 
+.color-bar {
+  position: absolute;
+  width: 200%;
+  height: 5px;
+  background: linear-gradient(90deg,
+    rgba(96, 165, 250, 0) 0%,
+    rgba(96, 165, 250, 0.4) 50%,
+    rgba(96, 165, 250, 0) 100%);
+  transform: rotate(40deg);
+  transform-origin: left;
+  animation: barSlide 8s infinite linear;
+}
+ 
+.color-bar:nth-child(1) {
+  top: 15%;
+  left: -50%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+ 
+.color-bar:nth-child(2) {
+  top: 35%;
+  left: -50%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+ 
+.color-bar:nth-child(3) {
+  top: 55%;
+  left: -50%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+ 
+.color-bar:nth-child(4) {
+  top: 75%;
+  left: -50%;
+  animation-duration: 14s;
+  animation-delay: 3s;
+}
+ 
+@keyframes barSlide {
+  0% {
+    transform: translateX(-20%) rotate(40deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(50%) rotate(40deg);
+    opacity: 0;
+  }
+}
+ 
+/* Add angular light streaks that follow the 40-degree angle */
+.light-streaks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+ 
+.light-streak {
+  position: absolute;
+  width: 150%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    rgba(147, 197, 253, 0) 0%,
+    rgba(147, 197, 253, 0.9) 50%,
+    rgba(147, 197, 253, 0) 100%);
+  transform: rotate(40deg); /* Match 40-degree angle */
+  transform-origin: left;
+  filter: blur(2px);
+  animation: streakFlow 6s infinite ease-in-out;
+}
+ 
+.light-streak:nth-child(1) {
+  top: 25%;
+  left: -50%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+ 
+.light-streak:nth-child(2) {
+  top: 45%;
+  left: -50%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+ 
+.light-streak:nth-child(3) {
+  top: 65%;
+  left: -50%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+ 
+@keyframes streakFlow {
+  0% {
+    transform: translateX(-20%) rotate(40deg) translateY(0);
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    transform: translateX(20%) rotate(40deg) translateY(0);
+    opacity: 1;
+    width: 150%;
+  }
+  100% {
+    transform: translateX(60%) rotate(40deg) translateY(0);
+    opacity: 0;
+    width: 0;
+  }
+}
+ 
+/* Dashboard Layout Styles */
+
+ 
+/* Remove old underline class since we're using animated underline */
+.underline {
+  display: none;
+}
+ 
+/* Add new animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+@keyframes expandUnderline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+ 
+/* ShowcaseCarousel placement below hero */
+.showcase-carousel {
+  margin-top: 2rem;
+}
+ 
+ 

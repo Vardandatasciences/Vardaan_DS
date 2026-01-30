@@ -1,0 +1,158 @@
+.home-data-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: transparent;
+}
+
+.home-data-section .home-data-title {
+  text-align: center;
+  font-size: 3.5rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #1976d2 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.home-data-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.home-data-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.home-data-img-wrapper {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-data-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.home-data-content {
+  padding: 25px;
+}
+
+.home-data-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.home-data-desc {
+  font-size: 1.2rem;
+  color: #444 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  line-height: 1.8;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  opacity: 1 !important;
+}
+
+.home-data-highlight {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1976d2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-data-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .home-data-section .home-data-title {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-data-cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 400px;
+  }
+  
+  .home-data-section {
+    padding: 60px 15px;
+  }
+  
+  .home-data-section .home-data-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 40px;
+  }
+  
+  .home-data-img-wrapper {
+    height: 200px;
+  }
+  
+  .home-data-content {
+    padding: 20px;
+  }
+  
+  .home-data-highlight {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-data-section .home-data-title {
+    font-size: 2rem !important;
+  }
+  
+  .home-data-img-wrapper {
+    height: 180px;
+  }
+  
+  .home-data-content {
+    padding: 15px;
+  }
+  
+  .home-data-highlight {
+    font-size: 1.8rem;
+  }
+}
+
+.section-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}

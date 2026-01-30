@@ -1,0 +1,194 @@
+.showcase-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem 0 2rem 2rem;
+  background: transparent;
+}
+
+.showcase-card {
+  flex: 0 0 80vw;
+  max-width: 700px;
+  min-width: 320px;
+  height: 420px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  scroll-snap-align: center;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  transition: filter 0.3s;
+}
+
+.showcase-card:hover .showcase-media {
+  filter: brightness(0.8);
+}
+
+.showcase-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+  text-align: center;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.showcase-overlay h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.showcase-overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.showcase-btn {
+  background: #f87171;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.8rem 2.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.showcase-btn:hover {
+  background: #ef4444;
+  transform: scale(1.05);
+}
+
+/* Loading and Error States */
+.loading-placeholder,
+.error-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-placeholder p,
+.error-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.error-placeholder {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.error-placeholder p {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 900px) {
+  .showcase-card {
+    height: 320px;
+    max-width: 90vw;
+  }
+  .showcase-overlay h2 {
+    font-size: 2rem;
+  }
+  .showcase-overlay p {
+    font-size: 1rem;
+  }
+  .loading-placeholder,
+  .error-placeholder {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase-carousel {
+    gap: 1rem;
+    padding: 1rem 0 1rem 1rem;
+  }
+  .showcase-card {
+    height: 220px;
+    min-width: 220px;
+    max-width: 95vw;
+    border-radius: 14px;
+  }
+  .showcase-overlay {
+    padding: 1rem;
+  }
+  .showcase-overlay h2 {
+    font-size: 1.2rem;
+  }
+  .showcase-overlay p {
+    font-size: 0.9rem;
+  }
+  .showcase-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  .loading-placeholder,
+  .error-placeholder {
+    height: 220px;
+  }
+  .loading-placeholder p,
+  .error-placeholder p {
+    font-size: 1rem;
+  }
+} 

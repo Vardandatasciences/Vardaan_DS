@@ -1,0 +1,738 @@
+/* Victaa Showcase Page Styles - Unique to avoid conflicts */
+ 
+/* Root Variables for Victaa Brand Colors - Matching Original TypeScript Component */
+:root {
+  --vs-navy: hsl(210 65% 11%);
+  --vs-teal: hsl(180 100% 24%);
+  --vs-grey-light: hsl(210 15% 70%);
+  --vs-grey-lighter: hsl(210 15% 90%);
+  --vs-black: hsl(210 15% 7%);
+  --vs-white: #ffffff;
+  --vs-red: #dc2626;
+  --vs-green: #059669;
+}
+ 
+/* Main Container */
+.vs-showcase-container {
+  min-height: 100vh;
+  background-color: var(--vs-white);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--vs-black);
+}
+ 
+/* Container */
+.vs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+ 
+/* Hero Section - Matching Original TypeScript Component */
+.vs-hero-section {
+  position: relative;
+  background: var(--vs-navy);
+  color: var(--vs-white);
+  padding: 5rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+ 
+.vs-hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, var(--vs-navy), var(--vs-navy), hsl(180 100% 24% / 0.2));
+  z-index: 1;
+}
+ 
+.vs-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+ 
+.vs-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+ 
+.vs-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+ 
+.vs-hero-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+ 
+/* Urgency Section */
+.vs-urgency-section {
+  padding: 5rem 0;
+  background-color: var(--vs-white);
+}
+ 
+.vs-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--vs-black);
+  margin-bottom: 3rem;
+  text-align: center;
+  line-height: 1.2;
+}
+ 
+.vs-content-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--vs-black);
+  opacity: 0.9;
+}
+ 
+.vs-content-text p {
+  margin-bottom: 1.5rem;
+}
+ 
+.vs-emphasis-text {
+  font-weight: 600;
+  color: var(--vs-navy);
+  font-size: 1.125rem;
+}
+ 
+/* Response Section */
+.vs-response-section {
+  padding: 5rem 0;
+  background-color: var(--vs-grey-lighter);
+}
+ 
+/* Problem Solution Section - Matching Original TypeScript Component */
+.vs-problem-solution-section {
+  padding: 4rem 0;
+  background: var(--vs-navy);
+  color: var(--vs-white);
+}
+ 
+.vs-problem-solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+ 
+.vs-problem-card {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+}
+ 
+.vs-problem-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.vs-problem-icon {
+  font-size: 1.5rem;
+}
+ 
+.vs-problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.vs-problem-list li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  opacity: 0.9;
+  position: relative;
+  padding-left: 1.5rem;
+}
+ 
+.vs-problem-list li::before {
+  content: '•';
+  color: var(--vs-red);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+ 
+.vs-solution-card {
+  background: rgba(13, 148, 136, 0.1);
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+}
+ 
+.vs-solution-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.vs-solution-icon {
+  font-size: 1.5rem;
+}
+ 
+.vs-solution-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+ 
+/* Engineered Section */
+.vs-engineered-section {
+  padding: 5rem 0;
+  background-color: var(--vs-white);
+}
+ 
+.vs-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+ 
+.vs-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.125rem;
+  padding: 1rem;
+  background-color: var(--vs-grey-lighter);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+ 
+.vs-feature-item:hover {
+  background-color: var(--vs-teal);
+  color: var(--vs-white);
+  transform: translateY(-2px);
+}
+ 
+.vs-check-icon {
+  color: var(--vs-green);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+ 
+.vs-feature-item:hover .vs-check-icon {
+  color: var(--vs-white);
+}
+ 
+/* Challenge Solution Section */
+.vs-challenge-solution-section {
+  padding: 5rem 0;
+  background-color: var(--vs-grey-lighter);
+}
+ 
+.vs-table-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+ 
+.vs-challenge-table,
+.vs-solution-table {
+  flex: 1;
+}
+ 
+.vs-challenge-table table,
+.vs-solution-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--vs-grey-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+.vs-challenge-table th,
+.vs-solution-table th {
+  background-color: var(--vs-navy);
+  color: var(--vs-white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+ 
+.vs-solution-table th {
+  background-color: var(--vs-teal);
+}
+ 
+.vs-challenge-table td,
+.vs-solution-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--vs-grey-light);
+  font-size: 1rem;
+}
+ 
+.vs-challenge-table tr:nth-child(even),
+.vs-solution-table tr:nth-child(even) {
+  background-color: var(--vs-white);
+}
+ 
+.vs-solution-table td {
+  font-weight: 600;
+  color: var(--vs-teal);
+}
+ 
+.vs-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--vs-teal);
+  font-weight: bold;
+}
+ 
+/* Features Section */
+.vs-features-section {
+  padding: 5rem 0;
+  background-color: var(--vs-white);
+}
+ 
+.vs-features-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+ 
+.vs-feature-card {
+  background-color: var(--vs-white);
+  border: 1px solid var(--vs-grey-light);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+ 
+.vs-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--vs-teal);
+}
+ 
+.vs-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+ 
+.vs-feature-icon {
+  font-size: 1.5rem;
+  color: var(--vs-teal);
+}
+ 
+.vs-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vs-black);
+  margin: 0;
+}
+ 
+.vs-feature-description {
+  color: var(--vs-black);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0;
+}
+ 
+/* Comparison Section */
+.vs-comparison-section {
+  padding: 5rem 0;
+  background-color: var(--vs-grey-lighter);
+}
+ 
+.vs-comparison-table-container {
+  overflow-x: auto;
+  margin-top: 3rem;
+}
+ 
+.vs-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--vs-grey-light);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 800px;
+}
+ 
+.vs-comparison-table th {
+  background-color: var(--vs-navy);
+  color: var(--vs-white);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+ 
+.vs-comparison-table th:first-child {
+  text-align: left;
+}
+ 
+.vs-comparison-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--vs-grey-light);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+ 
+.vs-comparison-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+ 
+.vs-comparison-table tr:nth-child(even) {
+  background-color: var(--vs-white);
+}
+ 
+.vs-highlight {
+  background-color: var(--vs-teal);
+  color: var(--vs-white);
+  font-weight: bold;
+}
+ 
+/* Industry Section - Matching Original TypeScript Component */
+.vs-industry-section {
+  padding: 4rem 0;
+  background: var(--vs-navy);
+  color: var(--vs-white);
+  text-align: center;
+}
+ 
+.vs-industry-title {
+  color: var(--vs-white);
+  margin-bottom: 3rem;
+}
+ 
+.vs-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+ 
+.vs-industry-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+ 
+.vs-industry-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+ 
+.vs-industry-icon {
+  font-size: 2.5rem;
+}
+ 
+.vs-industry-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+ 
+.vs-industry-tagline {
+  margin-top: 3rem;
+}
+ 
+.vs-tagline-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vs-teal);
+  margin: 0;
+}
+ 
+/* FAQ Section */
+.vs-faq-section {
+  padding: 5rem 0;
+  background-color: var(--vs-grey-lighter);
+}
+ 
+.vs-faq-container {
+  margin-top: 3rem;
+}
+ 
+.vs-faq-item {
+  background-color: var(--vs-white);
+  border: 1px solid var(--vs-grey-light);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+ 
+.vs-faq-item:hover {
+  border-color: var(--vs-teal);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+ 
+.vs-faq-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--vs-teal);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+ 
+.vs-faq-answer {
+  color: var(--vs-black);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0;
+}
+ 
+.vs-faq-answer p {
+  margin-bottom: 1rem;
+}
+ 
+.vs-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+ 
+/* CTA Section - Matching Original TypeScript Component */
+.vs-cta-section {
+  padding: 3rem 0;
+  background: var(--vs-navy);
+  color: var(--vs-white);
+  text-align: center;
+}
+ 
+.vs-cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--vs-white);
+}
+ 
+.vs-cta-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+ 
+.vs-cta-button-container {
+  display: flex;
+  justify-content: center;
+}
+ 
+.vs-cta-button {
+  background-color: var(--vs-teal);
+  color: var(--vs-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+ 
+.vs-cta-button:hover {
+  background-color: var(--vs-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+ 
+.vs-cta-contact {
+  text-align: left;
+}
+ 
+.vs-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+ 
+.vs-contact-icon {
+  font-size: 1.25rem;
+}
+ 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .vs-container {
+    max-width: 1000px;
+  }
+ 
+  .vs-features-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+ 
+@media (max-width: 992px) {
+  .vs-hero-title {
+    font-size: 3rem;
+  }
+ 
+  .vs-section-title {
+    font-size: 2rem;
+  }
+ 
+  .vs-problem-solution-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+ 
+  .vs-table-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+ 
+  .vs-cta-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  .vs-cta-contact {
+    text-align: center;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .vs-container {
+    padding: 0 1rem;
+  }
+ 
+ 
+ 
+  .vs-hero-title {
+    font-size: 2.5rem;
+  }
+ 
+  .vs-hero-subtitle {
+    font-size: 1.25rem;
+  }
+ 
+  .vs-hero-description {
+    font-size: 1rem;
+  }
+ 
+  .vs-section-title {
+    font-size: 1.75rem;
+  }
+ 
+  .vs-features-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .vs-features-cards-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .vs-industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .vs-cta-title {
+    font-size: 1.5rem;
+  }
+ 
+  .vs-cta-button {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .vs-hero-title {
+    font-size: 2rem;
+  }
+ 
+ 
+ 
+  .vs-hero-subtitle {
+    font-size: 1.125rem;
+  }
+ 
+  .vs-section-title {
+    font-size: 1.5rem;
+  }
+ 
+  .vs-feature-card {
+    padding: 1.5rem;
+  }
+ 
+  .vs-industry-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .vs-tagline-text {
+    font-size: 1.25rem;
+  }
+ 
+  .vs-comparison-table {
+    font-size: 0.875rem;
+  }
+ 
+  .vs-comparison-table th,
+  .vs-comparison-table td {
+    padding: 0.75rem;
+  }
+}
+ 
+/* Animation for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+ 
+/* Focus styles for accessibility */
+.vs-cta-button:focus {
+  outline: 2px solid var(--vs-teal);
+  outline-offset: 2px;
+}
+ 
+/* Print styles */
+@media print {
+  .vs-showcase-container {
+    background-color: white;
+    color: black;
+  }
+ 
+  .vs-hero-section,
+  .vs-problem-solution-section,
+  .vs-industry-section,
+  .vs-cta-section {
+    background: white !important;
+    color: black !important;
+  }
+}
+ 
